@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AB18DA1FC90088BB88 /* Foundation.framework */; };
+		C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */; };
+		C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AF18DA1FC90088BB88 /* UIKit.framework */; };
+		C536F0B618DA1FC90088BB88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C536F0B418DA1FC90088BB88 /* InfoPlist.strings */; };
+		C536F0B818DA1FC90088BB88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0B718DA1FC90088BB88 /* main.m */; };
+		C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0BB18DA1FC90088BB88 /* AppDelegate.m */; };
+		C536F0BF18DA1FC90088BB88 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */; };
+		C536F0C218DA1FC90088BB88 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */; };
+		C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0C418DA1FC90088BB88 /* FirstViewController.m */; };
+		C536F0C818DA1FC90088BB88 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0C718DA1FC90088BB88 /* SecondViewController.m */; };
+		C536F0CA18DA1FC90088BB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C536F0C918DA1FC90088BB88 /* Images.xcassets */; };
+		C536F0D118DA1FC90088BB88 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0D018DA1FC90088BB88 /* XCTest.framework */; };
+		C536F0D218DA1FC90088BB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AB18DA1FC90088BB88 /* Foundation.framework */; };
+		C536F0D318DA1FC90088BB88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AF18DA1FC90088BB88 /* UIKit.framework */; };
+		C536F0DB18DA1FC90088BB88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C536F0D918DA1FC90088BB88 /* InfoPlist.strings */; };
+		C536F0DD18DA1FC90088BB88 /* BackstepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0DC18DA1FC90088BB88 /* BackstepTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C536F0D418DA1FC90088BB88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C536F0A018DA1FC80088BB88 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C536F0A718DA1FC80088BB88;
+			remoteInfo = Backstep;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C536F0A818DA1FC90088BB88 /* Backstep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backstep.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C536F0AB18DA1FC90088BB88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C536F0AF18DA1FC90088BB88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C536F0B318DA1FC90088BB88 /* Backstep-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Backstep-Info.plist"; sourceTree = "<group>"; };
+		C536F0B518DA1FC90088BB88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C536F0B718DA1FC90088BB88 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C536F0B918DA1FC90088BB88 /* Backstep-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Backstep-Prefix.pch"; sourceTree = "<group>"; };
+		C536F0BA18DA1FC90088BB88 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C536F0BB18DA1FC90088BB88 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C536F0BE18DA1FC90088BB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		C536F0C118DA1FC90088BB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		C536F0C318DA1FC90088BB88 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		C536F0C418DA1FC90088BB88 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		C536F0C618DA1FC90088BB88 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		C536F0C718DA1FC90088BB88 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		C536F0C918DA1FC90088BB88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C536F0CF18DA1FC90088BB88 /* BackstepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackstepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C536F0D018DA1FC90088BB88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C536F0D818DA1FC90088BB88 /* BackstepTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BackstepTests-Info.plist"; sourceTree = "<group>"; };
+		C536F0DA18DA1FC90088BB88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C536F0DC18DA1FC90088BB88 /* BackstepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackstepTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C536F0A518DA1FC80088BB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */,
+				C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */,
+				C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C536F0CC18DA1FC90088BB88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0D118DA1FC90088BB88 /* XCTest.framework in Frameworks */,
+				C536F0D318DA1FC90088BB88 /* UIKit.framework in Frameworks */,
+				C536F0D218DA1FC90088BB88 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C536F09F18DA1FC80088BB88 = {
+			isa = PBXGroup;
+			children = (
+				C536F0B118DA1FC90088BB88 /* Backstep */,
+				C536F0D618DA1FC90088BB88 /* BackstepTests */,
+				C536F0AA18DA1FC90088BB88 /* Frameworks */,
+				C536F0A918DA1FC90088BB88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C536F0A918DA1FC90088BB88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0A818DA1FC90088BB88 /* Backstep.app */,
+				C536F0CF18DA1FC90088BB88 /* BackstepTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C536F0AA18DA1FC90088BB88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0AB18DA1FC90088BB88 /* Foundation.framework */,
+				C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */,
+				C536F0AF18DA1FC90088BB88 /* UIKit.framework */,
+				C536F0D018DA1FC90088BB88 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C536F0B118DA1FC90088BB88 /* Backstep */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0BA18DA1FC90088BB88 /* AppDelegate.h */,
+				C536F0BB18DA1FC90088BB88 /* AppDelegate.m */,
+				C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */,
+				C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */,
+				C536F0C318DA1FC90088BB88 /* FirstViewController.h */,
+				C536F0C418DA1FC90088BB88 /* FirstViewController.m */,
+				C536F0C618DA1FC90088BB88 /* SecondViewController.h */,
+				C536F0C718DA1FC90088BB88 /* SecondViewController.m */,
+				C536F0C918DA1FC90088BB88 /* Images.xcassets */,
+				C536F0B218DA1FC90088BB88 /* Supporting Files */,
+			);
+			path = Backstep;
+			sourceTree = "<group>";
+		};
+		C536F0B218DA1FC90088BB88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0B318DA1FC90088BB88 /* Backstep-Info.plist */,
+				C536F0B418DA1FC90088BB88 /* InfoPlist.strings */,
+				C536F0B718DA1FC90088BB88 /* main.m */,
+				C536F0B918DA1FC90088BB88 /* Backstep-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C536F0D618DA1FC90088BB88 /* BackstepTests */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0DC18DA1FC90088BB88 /* BackstepTests.m */,
+				C536F0D718DA1FC90088BB88 /* Supporting Files */,
+			);
+			path = BackstepTests;
+			sourceTree = "<group>";
+		};
+		C536F0D718DA1FC90088BB88 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0D818DA1FC90088BB88 /* BackstepTests-Info.plist */,
+				C536F0D918DA1FC90088BB88 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C536F0A718DA1FC80088BB88 /* Backstep */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C536F0E018DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "Backstep" */;
+			buildPhases = (
+				C536F0A418DA1FC80088BB88 /* Sources */,
+				C536F0A518DA1FC80088BB88 /* Frameworks */,
+				C536F0A618DA1FC80088BB88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Backstep;
+			productName = Backstep;
+			productReference = C536F0A818DA1FC90088BB88 /* Backstep.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C536F0CE18DA1FC90088BB88 /* BackstepTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C536F0E318DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "BackstepTests" */;
+			buildPhases = (
+				C536F0CB18DA1FC90088BB88 /* Sources */,
+				C536F0CC18DA1FC90088BB88 /* Frameworks */,
+				C536F0CD18DA1FC90088BB88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C536F0D518DA1FC90088BB88 /* PBXTargetDependency */,
+			);
+			name = BackstepTests;
+			productName = BackstepTests;
+			productReference = C536F0CF18DA1FC90088BB88 /* BackstepTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C536F0A018DA1FC80088BB88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Backstep;
+				TargetAttributes = {
+					C536F0CE18DA1FC90088BB88 = {
+						TestTargetID = C536F0A718DA1FC80088BB88;
+					};
+				};
+			};
+			buildConfigurationList = C536F0A318DA1FC80088BB88 /* Build configuration list for PBXProject "Backstep" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C536F09F18DA1FC80088BB88;
+			productRefGroup = C536F0A918DA1FC90088BB88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C536F0A718DA1FC80088BB88 /* Backstep */,
+				C536F0CE18DA1FC90088BB88 /* BackstepTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C536F0A618DA1FC80088BB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0C218DA1FC90088BB88 /* Main_iPad.storyboard in Resources */,
+				C536F0CA18DA1FC90088BB88 /* Images.xcassets in Resources */,
+				C536F0BF18DA1FC90088BB88 /* Main_iPhone.storyboard in Resources */,
+				C536F0B618DA1FC90088BB88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C536F0CD18DA1FC90088BB88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0DB18DA1FC90088BB88 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C536F0A418DA1FC80088BB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0C818DA1FC90088BB88 /* SecondViewController.m in Sources */,
+				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */,
+				C536F0B818DA1FC90088BB88 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C536F0CB18DA1FC90088BB88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C536F0DD18DA1FC90088BB88 /* BackstepTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C536F0D518DA1FC90088BB88 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C536F0A718DA1FC80088BB88 /* Backstep */;
+			targetProxy = C536F0D418DA1FC90088BB88 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C536F0B418DA1FC90088BB88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C536F0B518DA1FC90088BB88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C536F0BE18DA1FC90088BB88 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C536F0C118DA1FC90088BB88 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		C536F0D918DA1FC90088BB88 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C536F0DA18DA1FC90088BB88 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C536F0DE18DA1FC90088BB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C536F0DF18DA1FC90088BB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C536F0E118DA1FC90088BB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Backstep/Backstep-Prefix.pch";
+				INFOPLIST_FILE = "Backstep/Backstep-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C536F0E218DA1FC90088BB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Backstep/Backstep-Prefix.pch";
+				INFOPLIST_FILE = "Backstep/Backstep-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C536F0E418DA1FC90088BB88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Backstep.app/Backstep";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Backstep/Backstep-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "BackstepTests/BackstepTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C536F0E518DA1FC90088BB88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Backstep.app/Backstep";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Backstep/Backstep-Prefix.pch";
+				INFOPLIST_FILE = "BackstepTests/BackstepTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C536F0A318DA1FC80088BB88 /* Build configuration list for PBXProject "Backstep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C536F0DE18DA1FC90088BB88 /* Debug */,
+				C536F0DF18DA1FC90088BB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C536F0E018DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "Backstep" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C536F0E118DA1FC90088BB88 /* Debug */,
+				C536F0E218DA1FC90088BB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C536F0E318DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "BackstepTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C536F0E418DA1FC90088BB88 /* Debug */,
+				C536F0E518DA1FC90088BB88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C536F0A018DA1FC80088BB88 /* Project object */;
+}
