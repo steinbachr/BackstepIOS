@@ -7,15 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface LostItem : NSObject
+@interface LostItem : JSONModel
 
-@property NSString *loserName;
-@property NSString *loserEmail;
+@property NSString *loser_name;
+@property NSString *loser_email;
 @property NSString *color;
 @property NSString *type;
 @property NSString *state;
 @property NSString *city;
-@property NSString *characteristics;
+@property NSString *identifying_characteristics;
 
 @end

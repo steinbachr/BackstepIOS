@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A47A6245D9D404A8EA8E14D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B290590157491498CF203C /* libPods.a */; };
 		C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AB18DA1FC90088BB88 /* Foundation.framework */; };
 		C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */; };
 		C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AF18DA1FC90088BB88 /* UIKit.framework */; };
@@ -27,6 +28,8 @@
 		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
 		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
+		C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */; };
+		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C536F0A818DA1FC90088BB88 /* Backstep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backstep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C536F0AB18DA1FC90088BB88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,6 +74,11 @@
 		C56C5ABA18DA6EC00076D65D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		C56C5ABC18DAAACD0076D65D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
 		C56C5ABD18DAAACD0076D65D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
+		C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationController.h; sourceTree = "<group>"; };
+		C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationController.m; sourceTree = "<group>"; };
+		C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
+		C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		C9B290590157491498CF203C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,7 @@
 				C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */,
 				C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */,
 				C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */,
+				1A47A6245D9D404A8EA8E14D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +113,7 @@
 				C536F0D618DA1FC90088BB88 /* BackstepTests */,
 				C536F0AA18DA1FC90088BB88 /* Frameworks */,
 				C536F0A918DA1FC90088BB88 /* Products */,
+				3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,6 +133,7 @@
 				C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */,
 				C536F0AF18DA1FC90088BB88 /* UIKit.framework */,
 				C536F0D018DA1FC90088BB88 /* XCTest.framework */,
+				C9B290590157491498CF203C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -132,6 +144,8 @@
 				C536F0BA18DA1FC90088BB88 /* AppDelegate.h */,
 				C536F0BB18DA1FC90088BB88 /* AppDelegate.m */,
 				C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */,
+				C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */,
+				C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */,
 				C56C5ABC18DAAACD0076D65D /* DetailsController.h */,
 				C56C5ABD18DAAACD0076D65D /* DetailsController.m */,
 				C536F0E918DA51CD0088BB88 /* BasicInfoController.h */,
@@ -147,6 +161,8 @@
 				C56C5AB718DA6B1A0076D65D /* PaymentController.m */,
 				C56C5AB918DA6EBF0076D65D /* LocationController.h */,
 				C56C5ABA18DA6EC00076D65D /* LocationController.m */,
+				C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */,
+				C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */,
 			);
 			path = Backstep;
 			sourceTree = "<group>";
@@ -187,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C536F0E018DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "Backstep" */;
 			buildPhases = (
+				437EE8D83C054AA7A104E5FD /* Check Pods Manifest.lock */,
 				C536F0A418DA1FC80088BB88 /* Sources */,
 				C536F0A518DA1FC80088BB88 /* Frameworks */,
 				C536F0A618DA1FC80088BB88 /* Resources */,
+				C94F51C2FB1B4EE0862F6F99 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -273,6 +291,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		437EE8D83C054AA7A104E5FD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C94F51C2FB1B4EE0862F6F99 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C536F0A418DA1FC80088BB88 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -280,7 +331,9 @@
 			files = (
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
+				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */,
 				C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */,
 				C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */,
 				C536F0E818DA50610088BB88 /* LostItem.m in Sources */,
@@ -417,6 +470,7 @@
 		};
 		C536F0E118DA1FC90088BB88 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -430,6 +484,7 @@
 		};
 		C536F0E218DA1FC90088BB88 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

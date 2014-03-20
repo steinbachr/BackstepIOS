@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B5D71F66-B05E-43B1-9AE6-46896F07CA93</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Backstep</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E0F3B5C6-F377-436E-BDAA-0F690AA90581</key>
+		<string>https://github.com/steinbachr/BackstepIOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Backstep.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E0F3B5C6-F377-436E-BDAA-0F690AA90581</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/steinbachr/BackstepIOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E0F3B5C6-F377-436E-BDAA-0F690AA90581</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E0F3B5C6-F377-436E-BDAA-0F690AA90581</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Backstep</string>
+		</dict>
+	</array>
+</dict>
+</plist>

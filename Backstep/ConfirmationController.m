@@ -1,19 +1,18 @@
 //
-//  DetailsController.m
+//  ConfirmationController.m
 //  Backstep
 //
 //  Created by Robert Steinbach on 3/19/14.
 //  Copyright (c) 2014 Backstep. All rights reserved.
 //
 
-#import "DetailsController.h"
-#import "PaymentController.h"
+#import "ConfirmationController.h"
 
-@interface DetailsController ()
+@interface ConfirmationController ()
 
 @end
 
-@implementation DetailsController
+@implementation ConfirmationController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,12 +33,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
-    PaymentController *dest = [segue destinationViewController];
-    dest.lostItem = self.lostItem;
-}
-
 @end

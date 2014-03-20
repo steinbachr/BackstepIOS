@@ -30,8 +30,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    self.lostItem.loserName = self.nameTextField.text;
-    self.lostItem.loserEmail = self.emailTextField.text;
+    self.lostItem.loser_name = self.nameTextField.text;
+    self.lostItem.loser_email = self.emailTextField.text;
     
     BasicInfoController *dest = [segue destinationViewController];
     dest.lostItem = self.lostItem;
