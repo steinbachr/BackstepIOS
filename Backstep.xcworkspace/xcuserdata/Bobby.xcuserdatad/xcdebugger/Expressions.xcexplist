@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__36-[ConfirmationController submitItem]_block_invoke:ConfirmationController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[json objectForKey:&quot;status_url&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

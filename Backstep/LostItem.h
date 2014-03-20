@@ -20,4 +20,8 @@
 @property NSString *identifying_characteristics;
 @property NSString *charge_token;
 
+// both returned as a result from a succesful POST
+@property NSString *status_url;
+@property NSString *description;
+
 @end
