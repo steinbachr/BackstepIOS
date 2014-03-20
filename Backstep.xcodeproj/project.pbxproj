@@ -16,13 +16,16 @@
 		C536F0BF18DA1FC90088BB88 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */; };
 		C536F0C218DA1FC90088BB88 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */; };
 		C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0C418DA1FC90088BB88 /* FirstViewController.m */; };
-		C536F0C818DA1FC90088BB88 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0C718DA1FC90088BB88 /* SecondViewController.m */; };
 		C536F0CA18DA1FC90088BB88 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C536F0C918DA1FC90088BB88 /* Images.xcassets */; };
 		C536F0D118DA1FC90088BB88 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0D018DA1FC90088BB88 /* XCTest.framework */; };
 		C536F0D218DA1FC90088BB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AB18DA1FC90088BB88 /* Foundation.framework */; };
 		C536F0D318DA1FC90088BB88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AF18DA1FC90088BB88 /* UIKit.framework */; };
 		C536F0DB18DA1FC90088BB88 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C536F0D918DA1FC90088BB88 /* InfoPlist.strings */; };
 		C536F0DD18DA1FC90088BB88 /* BackstepTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0DC18DA1FC90088BB88 /* BackstepTests.m */; };
+		C536F0E818DA50610088BB88 /* LostItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0E718DA50610088BB88 /* LostItem.m */; };
+		C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */; };
+		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
+		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +53,20 @@
 		C536F0C118DA1FC90088BB88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C536F0C318DA1FC90088BB88 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C536F0C418DA1FC90088BB88 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		C536F0C618DA1FC90088BB88 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		C536F0C718DA1FC90088BB88 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C536F0C918DA1FC90088BB88 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C536F0CF18DA1FC90088BB88 /* BackstepTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackstepTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C536F0D018DA1FC90088BB88 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C536F0D818DA1FC90088BB88 /* BackstepTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BackstepTests-Info.plist"; sourceTree = "<group>"; };
 		C536F0DA18DA1FC90088BB88 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C536F0DC18DA1FC90088BB88 /* BackstepTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackstepTests.m; sourceTree = "<group>"; };
+		C536F0E618DA50610088BB88 /* LostItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostItem.h; sourceTree = "<group>"; };
+		C536F0E718DA50610088BB88 /* LostItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostItem.m; sourceTree = "<group>"; };
+		C536F0E918DA51CD0088BB88 /* BasicInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicInfoController.h; sourceTree = "<group>"; };
+		C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicInfoController.m; sourceTree = "<group>"; };
+		C56C5AB618DA6B1A0076D65D /* PaymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentController.h; sourceTree = "<group>"; };
+		C56C5AB718DA6B1A0076D65D /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
+		C56C5AB918DA6EBF0076D65D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		C56C5ABA18DA6EC00076D65D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,13 +129,19 @@
 				C536F0BA18DA1FC90088BB88 /* AppDelegate.h */,
 				C536F0BB18DA1FC90088BB88 /* AppDelegate.m */,
 				C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */,
+				C536F0E918DA51CD0088BB88 /* BasicInfoController.h */,
+				C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */,
+				C536F0E618DA50610088BB88 /* LostItem.h */,
+				C536F0E718DA50610088BB88 /* LostItem.m */,
 				C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */,
 				C536F0C318DA1FC90088BB88 /* FirstViewController.h */,
 				C536F0C418DA1FC90088BB88 /* FirstViewController.m */,
-				C536F0C618DA1FC90088BB88 /* SecondViewController.h */,
-				C536F0C718DA1FC90088BB88 /* SecondViewController.m */,
 				C536F0C918DA1FC90088BB88 /* Images.xcassets */,
 				C536F0B218DA1FC90088BB88 /* Supporting Files */,
+				C56C5AB618DA6B1A0076D65D /* PaymentController.h */,
+				C56C5AB718DA6B1A0076D65D /* PaymentController.m */,
+				C56C5AB918DA6EBF0076D65D /* LocationController.h */,
+				C56C5ABA18DA6EC00076D65D /* LocationController.m */,
 			);
 			path = Backstep;
 			sourceTree = "<group>";
@@ -258,9 +273,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C536F0C818DA1FC90088BB88 /* SecondViewController.m in Sources */,
+				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */,
 				C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */,
+				C536F0E818DA50610088BB88 /* LostItem.m in Sources */,
+				C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */,
 				C536F0B818DA1FC90088BB88 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -476,6 +494,7 @@
 				C536F0E218DA1FC90088BB88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C536F0E318DA1FC90088BB88 /* Build configuration list for PBXNativeTarget "BackstepTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +503,7 @@
 				C536F0E518DA1FC90088BB88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
