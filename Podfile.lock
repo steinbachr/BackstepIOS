@@ -1,10 +1,16 @@
 PODS:
   - JSONModel (0.12.0)
+  - PaymentKit (1.0.2)
+  - Stripe (1.0.2):
+    - PaymentKit
 
 DEPENDENCIES:
   - JSONModel (~> 0.12.0)
+  - Stripe (~> 1.0.2)
 
 SPEC CHECKSUMS:
   JSONModel: f391da60a15e11f8fa8950fb980b8f799ae3453f
+  PaymentKit: be75a5398a9465edd84f7249a9e57d707da025fb
+  Stripe: 8ce5fe9eca204058d325fcf08d4835585ab8d23b
 
 COCOAPODS: 0.29.0

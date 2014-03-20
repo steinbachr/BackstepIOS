@@ -7,6 +7,7 @@
 //
 
 #import "ConfirmationController.h"
+#import "JSONHTTPClient.h"
 
 @interface ConfirmationController ()
 
@@ -26,11 +27,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.confirmButton addTarget:self action:@selector(submitItem) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+/***--- Submit New Lost Item ---***/
+- (void)submitItem
+{
+    [JSONHTTPClient postJSONFromURLWithString:@"http://www.back-step.com/api/items/"
+                                   bodyString:[self.lostItem toJSONString]
+                                   completion:^(id json, JSONModelError *err) {
+                                       NSLog(err.description);                                       
+                                   }];
 }
 @end

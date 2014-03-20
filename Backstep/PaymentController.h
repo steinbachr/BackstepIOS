@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LostItem.h"
+#import "STPView.h"
 
-@interface PaymentController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
+@interface PaymentController : UIViewController <STPViewDelegate>
 
-@property (weak, nonatomic)     IBOutlet UIPickerView *month;
-@property (strong, nonatomic)   NSArray *monthsArray;
-@property (weak, nonatomic) IBOutlet UIPickerView *year;
-@property (strong, nonatomic)   NSArray *yearsArray;
-
+@property STPView* stripeView;
 @property LostItem *lostItem;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
 
 @end

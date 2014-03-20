@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LostItem.h"
 
 @interface ConfirmationController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property LostItem *lostItem;
 
 @end

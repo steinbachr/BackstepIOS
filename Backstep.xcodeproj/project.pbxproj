@@ -30,6 +30,7 @@
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
 		C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */; };
 		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
+		C5F082C818DB697500E7AD27 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F082C718DB697500E7AD27 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationController.m; sourceTree = "<group>"; };
 		C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
 		C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		C5F082C718DB697500E7AD27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C9B290590157491498CF203C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5F082C818DB697500E7AD27 /* QuartzCore.framework in Frameworks */,
 				C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */,
 				C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */,
 				C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */,
@@ -129,6 +132,7 @@
 		C536F0AA18DA1FC90088BB88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C5F082C718DB697500E7AD27 /* QuartzCore.framework */,
 				C536F0AB18DA1FC90088BB88 /* Foundation.framework */,
 				C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */,
 				C536F0AF18DA1FC90088BB88 /* UIKit.framework */,

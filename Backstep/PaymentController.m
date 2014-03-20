@@ -7,12 +7,14 @@
 //
 
 #import "PaymentController.h"
+#import "ConfirmationController.h"
 
 @interface PaymentController ()
 
 @end
 
 @implementation PaymentController
+@synthesize finishButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,11 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.monthsArray = @[@"January", @"February", @"March", @"April", @"May", @"June", @"July", @"August", @"September", @"October", @"November", @"December"];
-    self.yearsArray = @[@"2014", @"2015", @"2016", @"2017", @"2018"];
+    NSString *TEST_KEY = @"pk_test_nYjyroP50S8sk1CZ3WI4j4fn";
+    NSString *LIVE_KEY = @"pk_live_iBALrjzz9ewnL6OyOi3F6QNB";
     
-    [self.month selectRow:6 inComponent:0 animated:NO];
-    [self.year selectRow:2 inComponent:0 animated:NO];    
+    self.finishButton.enabled = NO;
+    [self.finishButton addTarget:self action:@selector(save:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.stripeView = [[STPView alloc] initWithFrame:CGRectMake(15,200,290,55)
+                                              andKey:TEST_KEY];
+    self.stripeView.delegate = self;
+    [self.view addSubview:self.stripeView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,35 +46,46 @@
     // Dispose of any resources that can be recreated.
 }
 
-// Overrides of UIPickerViewDataSource
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    return 1;
+    ConfirmationController *dest = [segue destinationViewController];
+    dest.lostItem = self.lostItem;
 }
 
-// returns the # of rows in each component..
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
-{
-    if (pickerView == self.month) {
-        return [self.monthsArray count];
-    } else {
-        return [self.yearsArray count];
-    }
-}
 
-// Overrides of UIPickerViewDelegate
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
+/***--- STRIPE PAYMENT STUFF ---***/
+- (void)stripeView:(STPView *)view withCard:(PKCard *)card isValid:(BOOL)valid
 {
-    if (pickerView == self.month) {
-        return [self.monthsArray objectAtIndex:row];
-    } else {
-        return [self.yearsArray objectAtIndex:row];
-    }
-}
-
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
-{
+    self.finishButton.enabled = valid;
     
+    if (valid) {
+        [self.finishButton setBackgroundColor:[UIColor blueColor]];
+    } else {
+        [self.finishButton setBackgroundColor:[UIColor grayColor]];
+    }
+}
+
+- (void)handleError:(NSError *)error
+{
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error")
+                                                      message:[error localizedDescription]
+                                                     delegate:nil
+                                            cancelButtonTitle:NSLocalizedString(@"OK", @"OK")
+                                            otherButtonTitles:nil];
+    [message show];
+}
+
+- (IBAction)save:(id)sender
+{
+    // Call 'createToken' when the save button is tapped
+    [self.stripeView createToken:^(STPToken *token, NSError *error) {
+        if (error) {
+            // Handle error
+            [self handleError:error];
+        } else {
+            self.lostItem.charge_token = token.tokenId;
+        }
+    }];
 }
 
 @end

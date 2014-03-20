@@ -18,5 +18,6 @@
 @property NSString *state;
 @property NSString *city;
 @property NSString *identifying_characteristics;
+@property NSString *charge_token;
 
 @end
