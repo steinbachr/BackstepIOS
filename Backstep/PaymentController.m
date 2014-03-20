@@ -27,10 +27,10 @@
 {
     [super viewDidLoad];
     self.monthsArray = @[@"January", @"February", @"March", @"April", @"May", @"June", @"July", @"August", @"September", @"October", @"November", @"December"];
-    self.yearsArray = @[@"2014", @"2015", @"2016"];
+    self.yearsArray = @[@"2014", @"2015", @"2016", @"2017", @"2018"];
     
     [self.month selectRow:6 inComponent:0 animated:NO];
-    [self.year selectRow:1 inComponent:0 animated:NO];
+    [self.year selectRow:2 inComponent:0 animated:NO];    
 }
 
 - (void)didReceiveMemoryWarning

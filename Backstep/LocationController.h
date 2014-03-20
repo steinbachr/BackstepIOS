@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LostItem.h"
 
 @interface LocationController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 @property (weak, nonatomic)     IBOutlet UIPickerView *state;
 @property (strong, nonatomic)   NSArray *statesArray;
+
+@property LostItem *lostItem;
 
 @end

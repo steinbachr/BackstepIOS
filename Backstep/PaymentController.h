@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LostItem.h"
 
 @interface PaymentController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -14,5 +15,7 @@
 @property (strong, nonatomic)   NSArray *monthsArray;
 @property (weak, nonatomic) IBOutlet UIPickerView *year;
 @property (strong, nonatomic)   NSArray *yearsArray;
+
+@property LostItem *lostItem;
 
 @end

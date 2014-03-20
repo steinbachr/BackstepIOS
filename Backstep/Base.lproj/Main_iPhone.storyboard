@@ -47,6 +47,10 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ccZ-t3-StM"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="7Ae-7k-CUP" id="YHs-O3-12p"/>
+                        <outlet property="nameTextField" destination="Yd3-7E-eKX" id="ldV-tO-vrK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
@@ -159,6 +163,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="l7W-H0-xBC"/>
                     <connections>
+                        <outlet property="locationTextField" destination="ZB2-Df-fbA" id="q3T-Ab-Vpw"/>
                         <outlet property="state" destination="Qoy-6l-3sc" id="zO7-fz-5Fa"/>
                     </connections>
                 </viewController>
@@ -166,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="2075" y="-138"/>
         </scene>
-        <!--View Controller - Details-->
+        <!--Details Controller - Details-->
         <scene sceneID="9bh-TH-yd6">
             <objects>
-                <viewController id="zEy-W3-drT" sceneMemberID="viewController">
+                <viewController id="zEy-W3-drT" customClass="DetailsController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1A9-iZ-Pl4"/>
                         <viewControllerLayoutGuide type="bottom" id="0kh-0c-Ory"/>
@@ -205,6 +210,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="Wjb-Q3-r0B"/>
+                    <connections>
+                        <outlet property="characteristicsTextField" destination="ncM-X4-sWP" id="0hZ-cv-fgS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90v-tJ-saE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -257,6 +265,9 @@
                                 <state key="normal" title="Finish">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7h0-hI-0iO" kind="modal" id="bwe-um-6RG"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="you will be charged $20*" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M20-x8-2Gm">
                                 <rect key="frame" x="88" y="71" width="188" height="21"/>
@@ -282,6 +293,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jic-Z9-5f2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1817" y="575"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2ki-9d-Q3C">
+            <objects>
+                <viewController id="7h0-hI-0iO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eXB-79-Xwl"/>
+                        <viewControllerLayoutGuide type="bottom" id="n24-BG-sGW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n8b-DD-lAb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mDY-3C-cAz">
+                                <rect key="frame" x="71" y="270" width="179" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Cancel"/>
+                                    <segment title="OK"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clicking OK will charge your card $20. Again, if we don't find your item within 5 days, you pay nothing." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="zuk-Er-avp">
+                                <rect key="frame" x="10" y="150" width="300" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Igy-Nz-jTT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2241" y="575"/>
         </scene>
         <!--Navigation Controller - Find Item-->
         <scene sceneID="ROV-iJ-Sbk">

@@ -7,6 +7,8 @@
 //
 
 #import "FirstViewController.h"
+#import "LostItem.h"
+#import "BasicInfoController.h"
 
 @interface FirstViewController ()
 
@@ -17,13 +19,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.lostItem = [[LostItem alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    self.lostItem.loserName = self.nameTextField.text;
+    self.lostItem.loserEmail = self.emailTextField.text;
+    
+    BasicInfoController *dest = [segue destinationViewController];
+    dest.lostItem = self.lostItem;
 }
 
 @end

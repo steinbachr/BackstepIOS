@@ -26,6 +26,7 @@
 		C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */; };
 		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
 		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
+		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		C56C5AB718DA6B1A0076D65D /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
 		C56C5AB918DA6EBF0076D65D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
 		C56C5ABA18DA6EC00076D65D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		C56C5ABC18DAAACD0076D65D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
+		C56C5ABD18DAAACD0076D65D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				C536F0BA18DA1FC90088BB88 /* AppDelegate.h */,
 				C536F0BB18DA1FC90088BB88 /* AppDelegate.m */,
 				C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */,
+				C56C5ABC18DAAACD0076D65D /* DetailsController.h */,
+				C56C5ABD18DAAACD0076D65D /* DetailsController.m */,
 				C536F0E918DA51CD0088BB88 /* BasicInfoController.h */,
 				C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */,
 				C536F0E618DA50610088BB88 /* LostItem.h */,
@@ -273,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
 				C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */,
