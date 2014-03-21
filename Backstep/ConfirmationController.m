@@ -62,6 +62,7 @@
 
 - (void)submitItem
 {
+    self.indicator.hidden = NO;
     [JSONHTTPClient postJSONFromURLWithString:@"http://www.back-step.com/api/items/"
                                    bodyString:[self.lostItem toJSONString]
                                    completion:^(id json, JSONModelError *err) {

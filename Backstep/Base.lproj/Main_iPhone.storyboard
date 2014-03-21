@@ -350,11 +350,17 @@
                                     <segue destination="INH-RE-Djt" kind="custom" customClass="DismissSegue" id="SFb-8d-zFd"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="pGv-Xc-CsZ">
+                                <rect key="frame" x="150" y="425" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="confirmButton" destination="SWc-70-pzZ" id="qHD-2l-HCw"/>
+                        <outlet property="indicator" destination="pGv-Xc-CsZ" id="JDh-i6-mjX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Igy-Nz-jTT" userLabel="First Responder" sceneMemberID="firstResponder"/>

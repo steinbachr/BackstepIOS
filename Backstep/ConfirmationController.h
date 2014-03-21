@@ -12,6 +12,7 @@
 @interface ConfirmationController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property LostItem *lostItem;
 
 @end
