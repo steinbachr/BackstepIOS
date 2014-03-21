@@ -30,11 +30,12 @@
     [super viewDidLoad];
     NSString *TEST_KEY = @"pk_test_nYjyroP50S8sk1CZ3WI4j4fn";
     NSString *LIVE_KEY = @"pk_live_iBALrjzz9ewnL6OyOi3F6QNB";
+    NSInteger STRIPE_WIDTH = 290;
     
     self.finishButton.enabled = NO;
     [self.finishButton addTarget:self action:@selector(save:) forControlEvents:UIControlEventTouchUpInside];
     
-    self.stripeView = [[STPView alloc] initWithFrame:CGRectMake(15,200,290,55)
+    self.stripeView = [[STPView alloc] initWithFrame:CGRectMake((self.view.frame.size.width / 2) - (STRIPE_WIDTH / 2), 200, STRIPE_WIDTH, 55)
                                               andKey:TEST_KEY];
     self.stripeView.delegate = self;
     [self.view addSubview:self.stripeView];
