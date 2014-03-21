@@ -9,6 +9,7 @@
 #import "ConfirmationController.h"
 #import "JSONHTTPClient.h"
 #import "PlistOperations.h"
+#import "MyItemController.h"
 
 @interface ConfirmationController ()
 
@@ -53,6 +54,9 @@
     
     if (plistData) {
         [plistData writeToFile:plistPath atomically:YES];
+        
+        MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
+        [self presentViewController:myItemController animated:NO completion:nil];
     }
 }
 
