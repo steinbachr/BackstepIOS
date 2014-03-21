@@ -9,6 +9,8 @@
 #import "FirstViewController.h"
 #import "LostItem.h"
 #import "BasicInfoController.h"
+#import "PlistOperations.h"
+#import "MyItemController.h"
 
 @interface FirstViewController ()
 
@@ -19,6 +21,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSString *plistPath = [PlistOperations pListPath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
+        [self presentViewController:myItemController animated:NO completion:nil];
+    }
+    
+    // alloc space for a new lost item
     self.lostItem = [[LostItem alloc] init];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "MyItemController.h"
+#import "PlistOperations.h"
 
 @interface MyItemController ()
 
@@ -27,10 +28,8 @@
 {
     NSString *errorDesc = nil;
     NSPropertyListFormat format;
-    NSString *plistPath;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                              NSUserDomainMask, YES) objectAtIndex:0];
-    plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
+    NSString *plistPath = [PlistOperations pListPath];
+    
     if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
         plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
     }
@@ -57,7 +56,7 @@
     [fullyQualifiedUrl appendString:@"http://www.back-step.com"];
     [fullyQualifiedUrl appendString:itemUrl];
 
-    self.navHeader.title = itemDescription;
+    self.itemName.text = itemDescription;
     [self.itemWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:fullyQualifiedUrl]]];
 }
 

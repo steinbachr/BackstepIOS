@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="puj-DN-5Wn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q22-PW-Ooh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="2075" y="-138"/>
         </scene>
-        <!--My Item Controller - placeholder-->
+        <!--My Item Controller-->
         <scene sceneID="RGh-Ex-G9P">
             <objects>
-                <viewController id="TCF-7e-Qbk" customClass="MyItemController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="myItemController" id="TCF-7e-Qbk" customClass="MyItemController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="t6u-wv-aBY"/>
                         <viewControllerLayoutGuide type="bottom" id="XPf-z3-naa"/>
@@ -184,33 +184,39 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3y-3G-MH8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="499"/>
+                                <rect key="frame" x="0.0" y="57" width="320" height="384"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGr-d7-2er">
-                                <rect key="frame" x="74" y="514" width="173" height="39"/>
+                                <rect key="frame" x="74" y="486" width="173" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98823535439999999" green="0.72941178080000002" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal" title="Lost Another Item">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CZ4-MO-1fc" kind="push" id="pGa-2H-rux"/>
+                                    <segue destination="CZ4-MO-1fc" kind="custom" customClass="DismissSegue" id="eiX-r5-xzs"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwq-b8-M8C">
+                                <rect key="frame" x="55" y="28" width="211" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="placeholder" id="7KX-S3-vAq"/>
                     <connections>
+                        <outlet property="itemName" destination="kwq-b8-M8C" id="QFV-iN-s3c"/>
                         <outlet property="itemWebView" destination="o3y-3G-MH8" id="F5z-m5-Pxl"/>
-                        <outlet property="navHeader" destination="7KX-S3-vAq" id="DBy-5f-jgu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcJ-Dv-jUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1192" y="563"/>
+            <point key="canvasLocation" x="1194" y="565"/>
         </scene>
         <!--Details Controller - Details-->
         <scene sceneID="9bh-TH-yd6">
@@ -374,24 +380,6 @@
             </objects>
             <point key="canvasLocation" x="653" y="-138"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="e4v-Uf-ZAK">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="puj-DN-5Wn" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XQC-bP-Wke">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="TCF-7e-Qbk" kind="relationship" relationship="rootViewController" id="lx9-JT-GcV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="99m-am-dCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="666" y="563"/>
-        </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
@@ -403,7 +391,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="q0q-AG-2f2"/>
-        <segue reference="pGa-2H-rux"/>
+        <segue reference="eiX-r5-xzs"/>
+        <segue reference="SFb-8d-zFd"/>
     </inferredMetricsTieBreakers>
 </document>

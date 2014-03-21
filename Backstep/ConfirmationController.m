@@ -8,6 +8,7 @@
 
 #import "ConfirmationController.h"
 #import "JSONHTTPClient.h"
+#import "PlistOperations.h"
 
 @interface ConfirmationController ()
 
@@ -42,8 +43,7 @@
 - (void)saveItem
 {
     NSString *error;
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
+    NSString *plistPath = [PlistOperations pListPath];
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects:
                               [NSArray arrayWithObjects: self.lostItem.status_url, self.lostItem.description, nil]
                               forKeys:[NSArray arrayWithObjects: @"status_url", @"description", nil]];

@@ -30,6 +30,7 @@
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
 		C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */; };
 		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
+		C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C19E7818DCB27B009D9D97 /* PlistOperations.m */; };
 		C5F082C818DB697500E7AD27 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F082C718DB697500E7AD27 /* QuartzCore.framework */; };
 		C5F082CA18DB9CDF00E7AD27 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5F082C918DB9CDF00E7AD27 /* Data.plist */; };
 		C5F082CD18DBA9A200E7AD27 /* MyItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F082CC18DBA9A200E7AD27 /* MyItemController.m */; };
@@ -81,6 +82,8 @@
 		C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationController.m; sourceTree = "<group>"; };
 		C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
 		C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissSegue.m; sourceTree = "<group>"; };
+		C5C19E7718DCB27B009D9D97 /* PlistOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistOperations.h; sourceTree = "<group>"; };
+		C5C19E7818DCB27B009D9D97 /* PlistOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistOperations.m; sourceTree = "<group>"; };
 		C5F082C718DB697500E7AD27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C5F082C918DB9CDF00E7AD27 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		C5F082CB18DBA9A200E7AD27 /* MyItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemController.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				C56C5ABA18DA6EC00076D65D /* LocationController.m */,
 				C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */,
 				C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */,
+				C5C19E7718DCB27B009D9D97 /* PlistOperations.h */,
+				C5C19E7818DCB27B009D9D97 /* PlistOperations.m */,
 			);
 			path = Backstep;
 			sourceTree = "<group>";
@@ -346,6 +351,7 @@
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */,
 				C5F082CD18DBA9A200E7AD27 /* MyItemController.m in Sources */,
 				C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */,
 				C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */,

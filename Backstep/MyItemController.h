@@ -10,7 +10,7 @@
 
 @interface MyItemController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UINavigationItem *navHeader;
+@property (weak, nonatomic) IBOutlet UILabel *itemName;
 @property (weak, nonatomic) IBOutlet UIWebView *itemWebView;
 
 @end
