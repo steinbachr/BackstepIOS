@@ -10,4 +10,7 @@
 
 @implementation LostItem
 
+NSString * InfoRequiredTitle = @"All fields required";
+NSString * InfoRequiredMessage = @"We want to find your item as much as you do! So please give us all of the information we'll need to track it down.";
+
 @end

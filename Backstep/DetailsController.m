@@ -36,6 +36,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([self.characteristicsTextField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:InfoRequiredTitle
+                                                        message:InfoRequiredMessage
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     self.lostItem.identifying_characteristics = self.characteristicsTextField.text;

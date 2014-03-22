@@ -66,10 +66,20 @@
     [JSONHTTPClient postJSONFromURLWithString:@"http://www.back-step.com/api/items/"
                                    bodyString:[self.lostItem toJSONString]
                                    completion:^(id json, JSONModelError *err) {
-                                       self.lostItem.status_url = [json objectForKey:@"status_url"];
-                                       self.lostItem.description = [json objectForKey:@"description"];
-                                       
-                                       [self saveItem];
+                                       if ([json objectForKey:@"error"]) {
+                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops we have a problem"
+                                                                                           message:[json objectForKey:@"error"]
+                                                                                          delegate:nil
+                                                                                 cancelButtonTitle:@"OK"
+                                                                                 otherButtonTitles:nil];
+                                           [alert show];
+                                           self.indicator.hidden = YES;
+                                       } else {
+                                           self.lostItem.status_url = [json objectForKey:@"status_url"];
+                                           self.lostItem.description = [json objectForKey:@"description"];
+                                           
+                                           [self saveItem];
+                                       } 
                                    }];
 }
 @end

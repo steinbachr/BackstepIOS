@@ -62,6 +62,21 @@
     self.lostItem.state = [self.statesArray objectAtIndex:row];
 }
 
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ([self.locationTextField.text length] == 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:InfoRequiredTitle
+                                                        message:InfoRequiredMessage
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return NO;
+    }
+    
+    return YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     self.lostItem.city = self.locationTextField.text;

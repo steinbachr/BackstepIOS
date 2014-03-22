@@ -11,6 +11,9 @@
 
 @interface LostItem : JSONModel
 
+extern NSString *InfoRequiredTitle;
+extern NSString *InfoRequiredMessage;
+
 @property NSString *loser_name;
 @property NSString *loser_email;
 @property NSString *color;
