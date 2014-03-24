@@ -237,15 +237,23 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bu-ir-YAI">
-                                <rect key="frame" x="109" y="368" width="103" height="39"/>
+                                <rect key="frame" x="151" y="366" width="128" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98823535439999999" green="0.72941178080000002" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
-                                <state key="normal" title="Pay">
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Go Premium">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="INH-RE-Djt" kind="push" id="q0q-AG-2f2"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgA-un-CEZ">
+                                <rect key="frame" x="41" y="366" width="102" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98823535439999999" green="0.72941178080000002" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anything that uniquely identifies your item" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whg-2H-WrF">
                                 <rect key="frame" x="15" y="71" width="321" height="21"/>
@@ -253,12 +261,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="zwQ-sZ-DoD">
+                                <rect key="frame" x="150" y="256" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="Wjb-Q3-r0B"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="zwQ-sZ-DoD" id="Edi-a0-r2c"/>
                         <outlet property="characteristicsTextField" destination="ncM-X4-sWP" id="0hZ-cv-fgS"/>
+                        <outlet property="finishButton" destination="tgA-un-CEZ" id="pfL-Oo-N7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90v-tJ-saE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -397,7 +411,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="q0q-AG-2f2"/>
         <segue reference="eiX-r5-xzs"/>
-        <segue reference="SFb-8d-zFd"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 #import "DetailsController.h"
 #import "PaymentController.h"
+#import "LostItem.h"
 
 @interface DetailsController ()
 
@@ -27,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.finishButton addTarget:self action:@selector(submitItem) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +58,12 @@
     self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
     PaymentController *dest = [segue destinationViewController];
     dest.lostItem = self.lostItem;
+}
+
+- (void)submitItem
+{
+    self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
+    [LostItem submitItem:self.lostItem controller:self indicator:self.activityIndicator];
 }
 
 @end

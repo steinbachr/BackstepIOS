@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *characteristicsTextField;
 @property LostItem *lostItem;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (weak, nonatomic) IBOutlet UIButton *finishButton;
+
 @end
