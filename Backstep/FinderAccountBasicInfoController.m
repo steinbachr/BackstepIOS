@@ -7,6 +7,7 @@
 //
 
 #import "FinderAccountBasicInfoController.h"
+#import "FinderAccountInstitutionController.h"
 
 @interface FinderAccountBasicInfoController ()
 
@@ -28,6 +29,7 @@
     [super viewDidLoad];
     [self.nextButton addTarget:self action:@selector(createUser) forControlEvents:UIControlEventTouchUpInside];
     self.user = [[User alloc] init];
+    self.user.finder = self.finder;
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,19 +43,15 @@
 {
     self.user.email = self.emailText.text;
     self.user.password = self.passwordText.text;
+    self.finder.name = self.nameText.text;
     [self.user create:self.indicator];
 }
 
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    FinderAccountInstitutionController *dest = [segue destinationViewController];
+    dest.finder = self.finder;
 }
-*/
 
 @end

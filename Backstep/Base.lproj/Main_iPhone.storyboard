@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="2227" y="794"/>
         </scene>
-        <!--View Controller - School-->
+        <!--Finder Account Institution Controller - School-->
         <scene sceneID="GYD-yp-94o">
             <objects>
-                <viewController id="lIB-UA-WYo" sceneMemberID="viewController">
+                <viewController id="lIB-UA-WYo" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wma-s1-nrv"/>
                         <viewControllerLayoutGuide type="bottom" id="Naf-fw-kda"/>
@@ -391,9 +391,34 @@
                     <view key="view" contentMode="scaleToFill" id="DmC-us-2FY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-N2-fqp">
+                                <rect key="frame" x="20" y="106" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xn-NC-xUD">
+                                <rect key="frame" x="100" y="408" width="120" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="UON-2b-9Ma">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="School" id="CfE-Xs-jVi"/>
+                    <connections>
+                        <outlet property="indicator" destination="UON-2b-9Ma" id="549-5j-MHr"/>
+                        <outlet property="institutionText" destination="H5Q-N2-fqp" id="WB3-qk-W9z"/>
+                        <outlet property="nextButton" destination="7Xn-NC-xUD" id="hQ7-8x-rfI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r65-2u-8fY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

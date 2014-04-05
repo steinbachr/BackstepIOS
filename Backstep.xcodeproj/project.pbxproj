@@ -30,6 +30,7 @@
 		C551FE5E18F09A6E002B3B85 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE5D18F09A6E002B3B85 /* User.m */; };
 		C551FE6218F09BC2002B3B85 /* ApiInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6118F09BC2002B3B85 /* ApiInterface.m */; };
 		C551FE6C18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */; };
+		C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */; };
 		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
 		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
@@ -88,6 +89,8 @@
 		C551FE6518F09C8E002B3B85 /* Creatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Creatable.h; sourceTree = "<group>"; };
 		C551FE6A18F0A4AC002B3B85 /* FinderAccountBasicInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderAccountBasicInfoController.h; sourceTree = "<group>"; };
 		C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderAccountBasicInfoController.m; sourceTree = "<group>"; };
+		C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderAccountInstitutionController.h; sourceTree = "<group>"; };
+		C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderAccountInstitutionController.m; sourceTree = "<group>"; };
 		C56C5AB618DA6B1A0076D65D /* PaymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentController.h; sourceTree = "<group>"; };
 		C56C5AB718DA6B1A0076D65D /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
 		C56C5AB918DA6EBF0076D65D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
@@ -268,6 +271,8 @@
 				C551FE5518F09075002B3B85 /* FinderAccountTypeController.m */,
 				C551FE6A18F0A4AC002B3B85 /* FinderAccountBasicInfoController.h */,
 				C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */,
+				C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */,
+				C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */,
 			);
 			name = FinderControllers;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
+				C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */,
 				C551FE5B18F092F5002B3B85 /* FinderProfile.m in Sources */,
 				C551FE6218F09BC2002B3B85 /* ApiInterface.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,

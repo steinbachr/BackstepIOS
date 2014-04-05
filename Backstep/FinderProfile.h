@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+#import "Creatable.h"
 
-@interface FinderProfile : JSONModel
+@interface FinderProfile : JSONModel<Creatable>
 
-@property NSInteger id;
-@property NSInteger user;
-@property NSInteger institution;
+@property NSString *id;
+@property NSString *user;
 @property NSString *name;
-@property NSString *is_individual;
+@property NSString *institution;
 
 @end

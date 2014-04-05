@@ -18,10 +18,12 @@
                      url: @"http://www.back-step.com/api/users/"
                indicator: indicator];
 }
+
 - (void) afterCreate:(id) json
 {
     self.id = [json objectForKey:@"id"];
     self.email = [json objectForKey:@"email"];
+    self.finder.user = self.id;
 }
 
 @end

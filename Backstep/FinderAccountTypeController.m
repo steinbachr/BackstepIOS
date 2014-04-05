@@ -7,6 +7,7 @@
 //
 
 #import "FinderAccountTypeController.h"
+#import "FinderAccountBasicInfoController.h"
 
 @interface FinderAccountTypeController ()
 
@@ -27,6 +28,7 @@
 {
     [super viewDidLoad];
     self.typesArray = @[@"School"];
+    self.finder = [[FinderProfile alloc] init];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,6 +57,12 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    FinderAccountBasicInfoController *dest = [segue destinationViewController];
+    dest.finder = self.finder;
 }
 
 @end

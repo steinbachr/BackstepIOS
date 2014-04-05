@@ -27,7 +27,8 @@
                                                                                  otherButtonTitles:nil];
                                            [alert show];
                                            indicator.hidden = YES;
-                                       } else {                                           
+                                       } else {
+                                           indicator.hidden = YES;
                                            [jsonObj afterCreate:json];
                                        }
                                    }];
