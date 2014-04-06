@@ -67,4 +67,18 @@
     [[NSFileManager defaultManager] removeItemAtPath:[PlistOperations pListPath] error:&error];
 }
 
++ (NSString *) plistVal:(NSString *)key
+{
+    NSDictionary *plist = [PlistOperations openPlist];
+    return [plist objectForKey:key];
+}
+
+
+
+/**-- Specific Methods --**/
++ (NSString *) getFinderId
+{
+    return [PlistOperations plistVal:@"finder_id"];
+}
+
 @end

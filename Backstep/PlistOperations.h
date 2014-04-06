@@ -10,9 +10,14 @@
 
 @interface PlistOperations : NSObject
 
-+(NSString *) pListPath;
+// Generic methods
++ (NSString *) pListPath;
 + (void) writeToPlist:(NSArray *)vals keys:(NSArray *)keys doAppend:(BOOL)doAppend;
-+(NSDictionary *) openPlist;
-+(void) deletePlist;
++ (NSDictionary *) openPlist;
++ (void) deletePlist;
++ (NSString *) plistVal:(NSString *)key;
+
+// Specific methods
++ (NSString *) getFinderId;
 
 @end

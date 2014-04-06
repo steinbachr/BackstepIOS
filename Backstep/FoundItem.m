@@ -8,12 +8,14 @@
 
 #import "FoundItem.h"
 #import "ApiInterface.h"
+#import "PlistOperations.h"
 
 @implementation FoundItem
 
+
 + (void)get:(UIViewController<GettableController> *)controller
 {
-    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?finder=%@", @"56"];
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?finder=%@", [PlistOperations getFinderId]];
     [ApiInterface getList:url controller:controller];
 }
 
