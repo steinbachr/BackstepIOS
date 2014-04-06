@@ -9,6 +9,7 @@
 #import "ApiInterface.h"
 #import "JSONHTTPClient.h"
 #import "Creatable.h"
+#import "Gettable.h"
 
 @implementation ApiInterface
 
@@ -51,5 +52,12 @@
     [ApiInterface createHelper:jsonObj url:url indicator:indicator controller:controller];
 }
 
++ (void)getList:(NSString *)url controller:(UIViewController<GettableController> *)controller
+{
+    [JSONHTTPClient getJSONFromURLWithString: url
+                                  completion: ^(id json, JSONModelError *err) {
+                                      [controller afterGet:json];
+                                  }];
+}
 
 @end

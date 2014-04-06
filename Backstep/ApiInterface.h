@@ -8,12 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+#import "Gettable.h"
+#import "GettableController.h"
 #import "Creatable.h"
 #import "CreatableController.h"
+
 
 @interface ApiInterface : NSObject
 
 + (void)create:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator;
 + (void)createThenDo:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator controller:(UIViewController<CreatableController> *)controller;
+
++ (void)getList:(NSString *)url controller:(UIViewController<GettableController> *)controller;
 
 @end

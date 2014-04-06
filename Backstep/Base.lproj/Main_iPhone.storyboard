@@ -171,46 +171,99 @@
             </objects>
             <point key="canvasLocation" x="2815" y="-548"/>
         </scene>
-        <!--View Controller - Item 1-->
-        <scene sceneID="mI7-X5-m9r">
+        <!--Found Items Controller - Found-->
+        <scene sceneID="0xL-QW-BT4">
             <objects>
-                <viewController id="mOT-vM-EKx" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="a83-O5-EF8"/>
-                        <viewControllerLayoutGuide type="bottom" id="558-PF-JTB"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zx1-h8-m7E">
+                <tableViewController id="Uud-Dx-Yfo" customClass="FoundItemsController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="22" id="4wo-yD-ua7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="kzT-NS-H0b"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HF1-zC-eO7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="itemCell" textLabel="jPT-Zr-iA6" detailTextLabel="oCI-gX-daT" imageView="1pb-Fs-gdh" style="IBUITableViewCellStyleSubtitle" id="Y76-hj-895">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y76-hj-895" id="hZ9-Su-zN0">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jPT-Zr-iA6">
+                                            <rect key="frame" x="58" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oCI-gX-daT">
+                                            <rect key="frame" x="58" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="missing_image_icon" id="1pb-Fs-gdh">
+                                            <rect key="frame" x="15" y="10" width="28" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Uud-Dx-Yfo" id="wus-0l-MBf"/>
+                            <outlet property="delegate" destination="Uud-Dx-Yfo" id="D8p-Dm-M8w"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Found" image="tabs_found" id="30a-T8-YxZ"/>
+                    <connections>
+                        <outlet property="itemsTable" destination="4wo-yD-ua7" id="vxK-bO-o6b"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cxd-5G-3jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2261" y="1523"/>
+            <point key="canvasLocation" x="2291" y="1555"/>
         </scene>
         <!--Finder Home Controller-->
         <scene sceneID="uSJ-6d-Eij">
             <objects>
                 <tabBarController storyboardIdentifier="finderProfileHome" definesPresentationContext="YES" id="2HX-A2-eF9" customClass="FinderHomeController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gCP-Mr-RRM"/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uoo-qY-y41">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mOT-vM-EKx" kind="relationship" relationship="viewControllers" id="6Vh-Hn-ZRi"/>
                         <segue destination="H4x-kX-0Ck" kind="relationship" relationship="viewControllers" id="QGh-oh-9XG"/>
+                        <segue destination="Taj-oN-hJf" kind="relationship" relationship="viewControllers" id="1MS-Sb-yHp"/>
+                        <segue destination="Uud-Dx-Yfo" kind="relationship" relationship="viewControllers" id="cNf-kz-K3A"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0f6-BU-Le2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1763" y="1781"/>
         </scene>
-        <!--View Controller - Item 2-->
+        <!--View Controller - Pending-->
+        <scene sceneID="dKa-sG-exm">
+            <objects>
+                <viewController id="Taj-oN-hJf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ojU-r2-hgx"/>
+                        <viewControllerLayoutGuide type="bottom" id="XfQ-L7-qBg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ia0-jL-mtA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Pending" image="tabs_pending" id="cy7-r2-NmF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bew-de-jPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2261" y="2902"/>
+        </scene>
+        <!--View Controller - New-->
         <scene sceneID="Lhh-jn-l3B">
             <objects>
                 <viewController id="H4x-kX-0Ck" sceneMemberID="viewController">
@@ -223,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Yot-hi-Xzo"/>
+                    <tabBarItem key="tabBarItem" title="New" image="tabs_new_item" id="Yot-hi-Xzo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDT-lV-pSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -667,6 +720,10 @@
     </scenes>
     <resources>
         <image name="header" width="854" height="226"/>
+        <image name="missing_image_icon" width="28" height="22"/>
+        <image name="tabs_found" width="28" height="28"/>
+        <image name="tabs_new_item" width="28" height="28"/>
+        <image name="tabs_pending" width="28" height="28"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
