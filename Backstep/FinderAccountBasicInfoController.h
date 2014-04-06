@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "FinderProfile.h"
 #import "User.h"
+#import "CreatableController.h"
 
-@interface FinderAccountBasicInfoController : UIViewController
+@interface FinderAccountBasicInfoController : UIViewController<CreatableController>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;

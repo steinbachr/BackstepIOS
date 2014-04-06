@@ -10,6 +10,8 @@
 #import "MyItemController.h"
 #import "PlistOperations.h"
 #import "JSONHTTPClient.h"
+#import "ApiInterface.h"
+#import "CreatableController.h"
 
 @implementation LostItem
 
@@ -37,28 +39,25 @@ NSString * InfoRequiredMessage = @"We want to find your item as much as you do! 
     }
 }
 
-// this method creates a lost item on the server and then writes the response to our .plist file
-+ (void)submitItem:(LostItem *)item controller:(UIViewController *)controller indicator:(UIActivityIndicatorView *)indicator
+// Createable Implementations
+- (void) create:(UIActivityIndicatorView *)indicator controller:(UIViewController<CreatableController> *)controller
 {
-    indicator.hidden = NO;
-    [JSONHTTPClient postJSONFromURLWithString:@"http://www.back-step.com/api/items/"
-                                   bodyString:[item toJSONString]
-                                   completion:^(id json, JSONModelError *err) {
-                                       if ([json objectForKey:@"error"]) {
-                                           UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops we have a problem"
-                                                                                           message:[json objectForKey:@"error"]
-                                                                                          delegate:nil
-                                                                                 cancelButtonTitle:@"OK"
-                                                                                 otherButtonTitles:nil];
-                                           [alert show];
-                                           indicator.hidden = YES;
-                                       } else {
-                                           item.status_url = [json objectForKey:@"status_url"];
-                                           item.description = [json objectForKey:@"description"];
-                                           
-                                           [item saveItem:item controller:controller];
-                                       }
-                                   }];
+    [ApiInterface createThenDo: self
+                           url: @"http://www.back-step.com/api/items/"
+                     indicator: indicator
+                    controller: controller];
+}
+
+- (void) afterCreate:(id) json
+{
+    self.id = [json objectForKey:@"id"];
+    self.status_url = [json objectForKey:@"status_url"];
+    self.description = [json objectForKey:@"description"];
+    
+    
+    [PlistOperations writeToPlist: [NSArray arrayWithObjects: self.id, self.status_url, self.description, nil]
+                             keys: [NSArray arrayWithObjects: @"item_id", @"status_url", @"description", nil]
+                         doAppend: YES];
 }
 
 @end

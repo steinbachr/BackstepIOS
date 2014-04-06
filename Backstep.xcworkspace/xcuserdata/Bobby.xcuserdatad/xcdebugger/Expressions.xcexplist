@@ -3,6 +3,9 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[FinderAccountTypeController prepareForSegue:sender:]:FinderAccountTypeController.m">
+      </ContextState>
+      <ContextState
          contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
       </ContextState>
       <ContextState
@@ -15,6 +18,9 @@
       </ContextState>
       <ContextState
          contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "main:main.m">
       </ContextState>
       <ContextState
          contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">

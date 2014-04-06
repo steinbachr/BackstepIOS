@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LostItem.h"
+#import "CreatableController.h"
 
-@interface ConfirmationController : UIViewController
+@interface ConfirmationController : UIViewController<CreatableController>
 
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;

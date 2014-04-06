@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LostItem.h"
+#import "CreatableController.h"
 
-@interface DetailsController : UIViewController
+@interface DetailsController : UIViewController<CreatableController>
 
 @property (weak, nonatomic) IBOutlet UITextField *characteristicsTextField;
 @property LostItem *lostItem;

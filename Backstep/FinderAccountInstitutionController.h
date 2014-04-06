@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "FinderProfile.h"
+#import "CreatableController.h"
 
-@interface FinderAccountInstitutionController : UIViewController
+@interface FinderAccountInstitutionController : UIViewController<CreatableController>
 
 @property (weak, nonatomic) IBOutlet UITextField *institutionText;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;

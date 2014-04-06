@@ -18,12 +18,21 @@
     return plistPath;
 }
 
-+ (void) writeToPlist:(NSArray *)vals keys:(NSArray *)keys
++ (void) writeToPlist:(NSArray *)vals keys:(NSArray *)keys doAppend:(BOOL)doAppend
 {
     NSString *error;
     NSString *plistPath = [PlistOperations pListPath];
     NSDictionary *plistDict = [NSDictionary dictionaryWithObjects: vals forKeys:keys];
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:plistDict
+    NSMutableDictionary *dictCopy = [plistDict mutableCopy];
+    
+    if (doAppend) {
+        NSDictionary *prevContents = [PlistOperations openPlist];
+        for(id key in prevContents) {
+            [dictCopy setObject:[prevContents objectForKey:key] forKey:key];
+        }
+    }
+    
+    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:dictCopy
                                                                    format:NSPropertyListXMLFormat_v1_0
                                                          errorDescription:&error];
     

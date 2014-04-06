@@ -8,15 +8,17 @@
 
 #import "User.h"
 #import "ApiInterface.h"
+#import "CreatableController.h"
 
 @implementation User
 
 // Createable Implementations
-- (void) create:(UIActivityIndicatorView *)indicator
+- (void) create:(UIActivityIndicatorView *)indicator controller:(UIViewController<CreatableController> *)controller
 {
-    [ApiInterface create: self
-                     url: @"http://www.back-step.com/api/users/"
-               indicator: indicator];
+    [ApiInterface createThenDo: self
+                           url: @"http://www.back-step.com/api/users/"
+                     indicator: indicator
+                    controller: controller];
 }
 
 - (void) afterCreate:(id) json

@@ -44,7 +44,7 @@
     self.user.email = self.emailText.text;
     self.user.password = self.passwordText.text;
     self.finder.name = self.nameText.text;
-    [self.user create:self.indicator];
+    [self.user create:self.indicator controller:self];
 }
 
 
@@ -52,6 +52,12 @@
 {
     FinderAccountInstitutionController *dest = [segue destinationViewController];
     dest.finder = self.finder;
+}
+
+/**-- CreatableController Implementations --**/
+- (void)afterCreate
+{
+    //since we just move onto the next step right away, theres nothing to do here
 }
 
 @end

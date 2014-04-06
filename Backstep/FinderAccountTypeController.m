@@ -8,6 +8,8 @@
 
 #import "FinderAccountTypeController.h"
 #import "FinderAccountBasicInfoController.h"
+#import "FinderHomeController.h"
+#import "PlistOperations.h"
 
 @interface FinderAccountTypeController ()
 
@@ -27,8 +29,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.typesArray = @[@"School"];
     self.finder = [[FinderProfile alloc] init];
+    
+    NSDictionary *plist = [PlistOperations openPlist];
+    if ([plist objectForKey:@"finder_id"]) {
+        FinderHomeController *finderHome = [self.storyboard instantiateViewControllerWithIdentifier:@"finderProfileHome"];
+        [self.navigationController presentViewController:finderHome animated:NO completion:nil];
+    }
+
+    self.typesArray = @[@"School"];
 }
 
 - (void)didReceiveMemoryWarning

@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
+#import "Creatable.h"
 
-@interface LostItem : JSONModel
+@interface LostItem : JSONModel<Creatable>
 
 extern NSString *InfoRequiredTitle;
 extern NSString *InfoRequiredMessage;
 
+@property NSString *id;
 @property NSString *loser_name;
 @property NSString *loser_email;
 @property NSString *color;

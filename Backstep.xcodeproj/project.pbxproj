@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A47A6245D9D404A8EA8E14D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B290590157491498CF203C /* libPods.a */; };
+		C528A48A18F0DD5C00AAC2E3 /* FinderHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */; };
 		C536F0AC18DA1FC90088BB88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AB18DA1FC90088BB88 /* Foundation.framework */; };
 		C536F0AE18DA1FC90088BB88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */; };
 		C536F0B018DA1FC90088BB88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C536F0AF18DA1FC90088BB88 /* UIKit.framework */; };
@@ -55,6 +56,9 @@
 
 /* Begin PBXFileReference section */
 		3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderHomeController.h; sourceTree = "<group>"; };
+		C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderHomeController.m; sourceTree = "<group>"; };
+		C528A48B18F10F0200AAC2E3 /* CreatableController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreatableController.h; sourceTree = "<group>"; };
 		C536F0A818DA1FC90088BB88 /* Backstep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Backstep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C536F0AB18DA1FC90088BB88 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C536F0AD18DA1FC90088BB88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -252,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				C551FE6518F09C8E002B3B85 /* Creatable.h */,
+				C528A48B18F10F0200AAC2E3 /* CreatableController.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -265,6 +270,8 @@
 				C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */,
 				C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */,
 				C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */,
+				C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */,
+				C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */,
 			);
 			name = FinderControllers;
 			sourceTree = "<group>";
@@ -429,6 +436,7 @@
 			files = (
 				C551FE6C18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m in Sources */,
 				C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */,
+				C528A48A18F0DD5C00AAC2E3 /* FinderHomeController.m in Sources */,
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,

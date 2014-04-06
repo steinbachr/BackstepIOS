@@ -190,12 +190,12 @@
             </objects>
             <point key="canvasLocation" x="2261" y="1523"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Finder Home Controller-->
         <scene sceneID="uSJ-6d-Eij">
             <objects>
-                <tabBarController definesPresentationContext="YES" id="2HX-A2-eF9" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="finderProfileHome" definesPresentationContext="YES" id="2HX-A2-eF9" customClass="FinderHomeController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gCP-Mr-RRM"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uoo-qY-y41">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -674,7 +674,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="SFb-8d-zFd"/>
         <segue reference="XJ9-pZ-ZXl"/>
+        <segue reference="SFb-8d-zFd"/>
     </inferredMetricsTieBreakers>
 </document>

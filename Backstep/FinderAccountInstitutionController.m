@@ -7,6 +7,7 @@
 //
 
 #import "FinderAccountInstitutionController.h"
+#import "FinderHomeController.h"
 
 @interface FinderAccountInstitutionController ()
 
@@ -35,21 +36,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**-- Button Actions --**/
 - (void)createFinder
 {
     self.finder.institution = self.institutionText.text;
-    [self.finder create:self.indicator];
+    [self.finder create:self.indicator controller:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/**-- CreatableController Implementations --**/
+- (void)afterCreate
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    FinderHomeController *finderHome = [self.storyboard instantiateViewControllerWithIdentifier:@"finderProfileHome"];
+    [self presentViewController:finderHome animated:NO completion:nil];
 }
-*/
 
 @end

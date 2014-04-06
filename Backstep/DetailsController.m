@@ -8,6 +8,7 @@
 
 #import "DetailsController.h"
 #import "PaymentController.h"
+#import "MyItemController.h"
 #import "LostItem.h"
 
 @interface DetailsController ()
@@ -63,7 +64,13 @@
 - (void)submitItem
 {
     self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
-    [LostItem submitItem:self.lostItem controller:self indicator:self.activityIndicator];
+    [self.lostItem create:nil controller:self];
+}
+/**-- Creatable Controller Implementations --**/
+- (void)afterCreate
+{
+    MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
+    [self presentViewController:myItemController animated:NO completion:nil];
 }
 
 @end

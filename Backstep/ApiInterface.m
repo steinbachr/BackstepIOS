@@ -13,9 +13,11 @@
 @implementation ApiInterface
 
 
-+ (void)create:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator
++ (void)createHelper:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator controller:(UIViewController<CreatableController> *)controller
 {
-    indicator.hidden = NO;
+    if (indicator) {
+        indicator.hidden = NO;
+    }
     [JSONHTTPClient postJSONFromURLWithString:url
                                    bodyString:[jsonObj toJSONString]
                                    completion:^(id json, JSONModelError *err) {
@@ -26,12 +28,28 @@
                                                                                  cancelButtonTitle:@"OK"
                                                                                  otherButtonTitles:nil];
                                            [alert show];
-                                           indicator.hidden = YES;
                                        } else {
-                                           indicator.hidden = YES;
                                            [jsonObj afterCreate:json];
+                                           if (controller) {
+                                               [controller afterCreate];
+                                           }
+                                       }
+                                       
+                                       if (indicator) {
+                                           indicator.hidden = YES;
                                        }
                                    }];
 }
+
++ (void)create:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator
+{
+    [ApiInterface createHelper:jsonObj url:url indicator:indicator controller:nil];
+}
+
++ (void)createThenDo:(JSONModel<Creatable> *)jsonObj url:(NSString *)url indicator:(UIActivityIndicatorView *)indicator controller:(UIViewController<CreatableController> *)controller
+{
+    [ApiInterface createHelper:jsonObj url:url indicator:indicator controller:controller];
+}
+
 
 @end

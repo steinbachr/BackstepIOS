@@ -7,45 +7,13 @@
 //
 
 #import "AppDelegate.h"
-#import "PlistOperations.h"
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    //[PlistOperations deletePlist]; //DEBUGGING!!!
-    //see if we've already made a choice of what type of user we want to be.
-    if ([self userChosenType]) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:[[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"] bundle:[NSBundle mainBundle]];
-        UIViewController *initialVC;
-        if ([self userSelectedFinder]) {
-            initialVC = [storyboard instantiateViewControllerWithIdentifier:@"finder_first"];
-        } else {
-            initialVC = [storyboard instantiateViewControllerWithIdentifier:@"lost_item_first"];
-        }
-        self.window.rootViewController = initialVC;
-    }
-    
+{    
     return YES;
-}
-
-// check if the user has made an indication of what type of user they are
-- (BOOL)userChosenType
-{
-    NSDictionary* plist = [PlistOperations openPlist];
-    if ([plist objectForKey:@"user_type"]) {
-        return YES;
-    } else {
-        return NO;
-    }
-}
-
-// check if the user has indicated they are a finder
-- (BOOL)userSelectedFinder
-{
-    NSDictionary* plist = [PlistOperations openPlist];
-    NSString* userType = [plist objectForKey:@"user_type"];
-    return [userType isEqualToString:@"finder"];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
