@@ -22,8 +22,8 @@
 {
     [super viewDidLoad];
     
-    NSString *plistPath = [PlistOperations pListPath];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    NSDictionary* plist = [PlistOperations openPlist];
+    if ([plist objectForKey:@"status_url"])
     {
         MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
         [self presentViewController:myItemController animated:NO completion:nil];

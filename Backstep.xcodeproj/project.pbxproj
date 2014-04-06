@@ -31,6 +31,7 @@
 		C551FE6218F09BC2002B3B85 /* ApiInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6118F09BC2002B3B85 /* ApiInterface.m */; };
 		C551FE6C18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */; };
 		C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */; };
+		C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C551FE7218F0CDDD002B3B85 /* HomeController.m */; };
 		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
 		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
@@ -91,6 +92,8 @@
 		C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderAccountBasicInfoController.m; sourceTree = "<group>"; };
 		C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderAccountInstitutionController.h; sourceTree = "<group>"; };
 		C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinderAccountInstitutionController.m; sourceTree = "<group>"; };
+		C551FE7118F0CDDD002B3B85 /* HomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		C551FE7218F0CDDD002B3B85 /* HomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		C56C5AB618DA6B1A0076D65D /* PaymentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentController.h; sourceTree = "<group>"; };
 		C56C5AB718DA6B1A0076D65D /* PaymentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
 		C56C5AB918DA6EBF0076D65D /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
@@ -172,6 +175,7 @@
 		C536F0B118DA1FC90088BB88 /* Backstep */ = {
 			isa = PBXGroup;
 			children = (
+				C551FE7018F0CD89002B3B85 /* LostItemControllers */,
 				C551FE6618F0A43A002B3B85 /* FinderControllers */,
 				C551FE6418F09C75002B3B85 /* Protocols */,
 				C551FE5F18F09AFA002B3B85 /* Helpers */,
@@ -179,29 +183,13 @@
 				C536F0BA18DA1FC90088BB88 /* AppDelegate.h */,
 				C536F0BB18DA1FC90088BB88 /* AppDelegate.m */,
 				C536F0BD18DA1FC90088BB88 /* Main_iPhone.storyboard */,
-				C5F082CB18DBA9A200E7AD27 /* MyItemController.h */,
-				C5F082CC18DBA9A200E7AD27 /* MyItemController.m */,
-				C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */,
-				C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */,
-				C56C5ABC18DAAACD0076D65D /* DetailsController.h */,
-				C56C5ABD18DAAACD0076D65D /* DetailsController.m */,
-				C536F0E918DA51CD0088BB88 /* BasicInfoController.h */,
-				C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */,
-				C536F0E618DA50610088BB88 /* LostItem.h */,
-				C536F0E718DA50610088BB88 /* LostItem.m */,
 				C536F0C018DA1FC90088BB88 /* Main_iPad.storyboard */,
-				C536F0C318DA1FC90088BB88 /* FirstViewController.h */,
-				C536F0C418DA1FC90088BB88 /* FirstViewController.m */,
 				C536F0C918DA1FC90088BB88 /* Images.xcassets */,
 				C536F0B218DA1FC90088BB88 /* Supporting Files */,
-				C56C5AB618DA6B1A0076D65D /* PaymentController.h */,
-				C56C5AB718DA6B1A0076D65D /* PaymentController.m */,
-				C56C5AB918DA6EBF0076D65D /* LocationController.h */,
-				C56C5ABA18DA6EC00076D65D /* LocationController.m */,
 				C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */,
 				C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */,
-				C5C19E7718DCB27B009D9D97 /* PlistOperations.h */,
-				C5C19E7818DCB27B009D9D97 /* PlistOperations.m */,
+				C551FE7118F0CDDD002B3B85 /* HomeController.h */,
+				C551FE7218F0CDDD002B3B85 /* HomeController.m */,
 			);
 			path = Backstep;
 			sourceTree = "<group>";
@@ -239,6 +227,8 @@
 		C551FE5818F09298002B3B85 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C536F0E618DA50610088BB88 /* LostItem.h */,
+				C536F0E718DA50610088BB88 /* LostItem.m */,
 				C551FE5918F092F5002B3B85 /* FinderProfile.h */,
 				C551FE5A18F092F5002B3B85 /* FinderProfile.m */,
 				C551FE5C18F09A6E002B3B85 /* User.h */,
@@ -250,6 +240,8 @@
 		C551FE5F18F09AFA002B3B85 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				C5C19E7718DCB27B009D9D97 /* PlistOperations.h */,
+				C5C19E7818DCB27B009D9D97 /* PlistOperations.m */,
 				C551FE6018F09BC2002B3B85 /* ApiInterface.h */,
 				C551FE6118F09BC2002B3B85 /* ApiInterface.m */,
 			);
@@ -275,6 +267,27 @@
 				C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */,
 			);
 			name = FinderControllers;
+			sourceTree = "<group>";
+		};
+		C551FE7018F0CD89002B3B85 /* LostItemControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C536F0C318DA1FC90088BB88 /* FirstViewController.h */,
+				C536F0C418DA1FC90088BB88 /* FirstViewController.m */,
+				C56C5AB618DA6B1A0076D65D /* PaymentController.h */,
+				C56C5AB718DA6B1A0076D65D /* PaymentController.m */,
+				C56C5AB918DA6EBF0076D65D /* LocationController.h */,
+				C56C5ABA18DA6EC00076D65D /* LocationController.m */,
+				C5F082CB18DBA9A200E7AD27 /* MyItemController.h */,
+				C5F082CC18DBA9A200E7AD27 /* MyItemController.m */,
+				C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */,
+				C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */,
+				C56C5ABC18DAAACD0076D65D /* DetailsController.h */,
+				C56C5ABD18DAAACD0076D65D /* DetailsController.m */,
+				C536F0E918DA51CD0088BB88 /* BasicInfoController.h */,
+				C536F0EA18DA51CD0088BB88 /* BasicInfoController.m */,
+			);
+			name = LostItemControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C551FE6C18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m in Sources */,
+				C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */,
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,

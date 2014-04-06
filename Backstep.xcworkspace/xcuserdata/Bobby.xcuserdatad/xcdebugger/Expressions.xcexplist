@@ -3,7 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
+         contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "__36-[ConfirmationController submitItem]_block_invoke:ConfirmationController.m">
@@ -15,6 +15,9 @@
       </ContextState>
       <ContextState
          contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

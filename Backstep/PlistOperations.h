@@ -11,5 +11,8 @@
 @interface PlistOperations : NSObject
 
 +(NSString *) pListPath;
++(void) writeToPlist:(NSArray *)vals keys:(NSArray *)keys;
++(NSDictionary *) openPlist;
++(void) deletePlist;
 
 @end
