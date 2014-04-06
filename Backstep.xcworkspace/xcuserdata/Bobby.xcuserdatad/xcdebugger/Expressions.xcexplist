@@ -9,15 +9,15 @@
          contextName = "-[FirstViewController shouldPerformSegueWithIdentifier:sender:]:FirstViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
-      </ContextState>
-      <ContextState
          contextName = "-[FoundItemsController tableView:cellForRowAtIndexPath:]:FoundItemsController.m">
          <PersistentStrings>
             <PersistentString
                value = "cell.textLabel">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "__36-[ConfirmationController submitItem]_block_invoke:ConfirmationController.m">
@@ -31,7 +31,7 @@
          contextName = "main:main.m">
       </ContextState>
       <ContextState
-         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[FoundItemsController tableView:numberOfRowsInSection:]:FoundItemsController.m">
@@ -40,16 +40,19 @@
          contextName = "-[FinderAccountTypeController prepareForSegue:sender:]:FinderAccountTypeController.m">
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
+         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
       </ContextState>
       <ContextState
          contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
       </ContextState>
       <ContextState
          contextName = "-[FoundItemsController afterGet:]:FoundItemsController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[ColorPicker pickerView:numberOfRowsInComponent:]:ColorPicker.m">
          <PersistentStrings>
             <PersistentString
-               value = "[rawItems objectAtIndex:i]">
+               value = "self.colorArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

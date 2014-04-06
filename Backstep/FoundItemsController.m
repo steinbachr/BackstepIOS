@@ -27,8 +27,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [FoundItem get:self];
+    [self getData];
     [self.itemsTable setContentInset:UIEdgeInsetsMake(50,0,0,0)];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    [self getData];
+}
+
+-(void)getData
+{
+    [FoundItem get:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,7 +78,7 @@
     }
     
     FoundItem *selectedItem = [self.items objectAtIndex:indexPath.row];    
-    cell.textLabel.text = selectedItem.color;
+    cell.textLabel.text = [selectedItem description];
     cell.detailTextLabel.text = selectedItem.identifying_characteristics;
 
     UIImage * picture = [selectedItem pictureAsImage];

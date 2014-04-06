@@ -228,7 +228,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="finderProfileHome" definesPresentationContext="YES" id="2HX-A2-eF9" customClass="FinderHomeController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="gCP-Mr-RRM"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="uoo-qY-y41">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -244,7 +244,7 @@
             </objects>
             <point key="canvasLocation" x="1763" y="1781"/>
         </scene>
-        <!--View Controller - Pending-->
+        <!--View Controller - Matches-->
         <scene sceneID="dKa-sG-exm">
             <objects>
                 <viewController id="Taj-oN-hJf" sceneMemberID="viewController">
@@ -257,16 +257,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pending" image="tabs_pending" id="cy7-r2-NmF"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="tabs_pending" id="cy7-r2-NmF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bew-de-jPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2261" y="2902"/>
         </scene>
-        <!--View Controller - New-->
+        <!--New Item Controller - New-->
         <scene sceneID="Lhh-jn-l3B">
             <objects>
-                <viewController id="H4x-kX-0Ck" sceneMemberID="viewController">
+                <viewController id="H4x-kX-0Ck" customClass="NewItemController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ggc-4W-VYX"/>
                         <viewControllerLayoutGuide type="bottom" id="18n-y1-ax3"/>
@@ -274,9 +274,52 @@
                     <view key="view" contentMode="scaleToFill" id="qY2-Jb-WA1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8a-Bg-j2H">
+                                <rect key="frame" x="9" y="55" width="105" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="H4x-kX-0Ck" id="dZa-UB-Xqw"/>
+                                    <outlet property="delegate" destination="H4x-kX-0Ck" id="Rsf-UU-zjt"/>
+                                </connections>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zKN-gL-ejb">
+                                <rect key="frame" x="130" y="55" width="182" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="H4x-kX-0Ck" id="cPG-mP-nKq"/>
+                                    <outlet property="delegate" destination="H4x-kX-0Ck" id="Qyk-RA-puY"/>
+                                </connections>
+                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-CT-7LB">
+                                <rect key="frame" x="17" y="269" width="287" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gW9-Gb-VKk">
+                                <rect key="frame" x="100" y="385" width="120" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="3fr-tF-ljN">
+                                <rect key="frame" x="150" y="327" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="New" image="tabs_new_item" id="Yot-hi-Xzo"/>
+                    <connections>
+                        <outlet property="categorySpinner" destination="zKN-gL-ejb" id="5kB-rM-ATF"/>
+                        <outlet property="colorSpinner" destination="E8a-Bg-j2H" id="Dvf-pZ-tIG"/>
+                        <outlet property="identifyingText" destination="AXn-CT-7LB" id="QFt-91-747"/>
+                        <outlet property="indicator" destination="3fr-tF-ljN" id="XaQ-kN-Zf9"/>
+                        <outlet property="submitButton" destination="gW9-Gb-VKk" id="AQL-aN-abb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDT-lV-pSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

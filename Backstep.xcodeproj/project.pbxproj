@@ -38,6 +38,8 @@
 		C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5AB718DA6B1A0076D65D /* PaymentController.m */; };
 		C56C5ABB18DA6EC00076D65D /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABA18DA6EC00076D65D /* LocationController.m */; };
 		C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C56C5ABD18DAAACD0076D65D /* DetailsController.m */; };
+		C5A6A18518F1DEB500038AD2 /* NewItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6A18418F1DEB500038AD2 /* NewItemController.m */; };
+		C5A6A18F18F1F0E900038AD2 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6A18E18F1F0E900038AD2 /* Constants.m */; };
 		C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */; };
 		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
 		C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C19E7818DCB27B009D9D97 /* PlistOperations.m */; };
@@ -112,6 +114,10 @@
 		C56C5ABA18DA6EC00076D65D /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
 		C56C5ABC18DAAACD0076D65D /* DetailsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsController.h; sourceTree = "<group>"; };
 		C56C5ABD18DAAACD0076D65D /* DetailsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsController.m; sourceTree = "<group>"; };
+		C5A6A18318F1DEB500038AD2 /* NewItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemController.h; sourceTree = "<group>"; };
+		C5A6A18418F1DEB500038AD2 /* NewItemController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemController.m; sourceTree = "<group>"; };
+		C5A6A18D18F1F0E900038AD2 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C5A6A18E18F1F0E900038AD2 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationController.h; sourceTree = "<group>"; };
 		C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationController.m; sourceTree = "<group>"; };
 		C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
@@ -258,6 +264,8 @@
 				C5C19E7818DCB27B009D9D97 /* PlistOperations.m */,
 				C551FE6018F09BC2002B3B85 /* ApiInterface.h */,
 				C551FE6118F09BC2002B3B85 /* ApiInterface.m */,
+				C5A6A18D18F1F0E900038AD2 /* Constants.h */,
+				C5A6A18E18F1F0E900038AD2 /* Constants.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -286,6 +294,8 @@
 				C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */,
 				C528A48C18F11EE200AAC2E3 /* FoundItemsController.h */,
 				C528A48D18F11EE200AAC2E3 /* FoundItemsController.m */,
+				C5A6A18318F1DEB500038AD2 /* NewItemController.h */,
+				C5A6A18418F1DEB500038AD2 /* NewItemController.m */,
 			);
 			name = FinderControllers;
 			sourceTree = "<group>";
@@ -452,12 +462,14 @@
 				C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */,
 				C528A48A18F0DD5C00AAC2E3 /* FinderHomeController.m in Sources */,
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
+				C5A6A18518F1DEB500038AD2 /* NewItemController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
 				C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */,
 				C551FE5B18F092F5002B3B85 /* FinderProfile.m in Sources */,
 				C551FE6218F09BC2002B3B85 /* ApiInterface.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C5A6A18F18F1F0E900038AD2 /* Constants.m in Sources */,
 				C551FE5E18F09A6E002B3B85 /* User.m in Sources */,
 				C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */,
 				C5F082CD18DBA9A200E7AD27 /* MyItemController.m in Sources */,

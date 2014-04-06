@@ -8,15 +8,18 @@
 
 #import "JSONModel.h"
 #import "Gettable.h"
+#import "Creatable.h"
 
-@interface FoundItem : JSONModel<Gettable>
+@interface FoundItem : JSONModel<Gettable, Creatable>
 
 @property NSString *id;
+@property NSString *finder;
 @property NSString *type;
 @property NSString *color;
 @property NSString *identifying_characteristics;
-@property NSString *picture;
+@property NSString<Optional> *picture;
 
 - (UIImage *)pictureAsImage;
+- (NSString *)description;
 
 @end
