@@ -20,10 +20,10 @@ extern NSString *InfoRequiredMessage;
 @property NSString *loser_email;
 @property NSString *color;
 @property NSString *type;
-@property NSString *state;
+@property NSString<Optional> *state;
 @property NSString *city;
 @property NSString *identifying_characteristics;
-@property NSString *charge_token;
+@property NSString<Optional> *charge_token;
 
 // both returned as a result from a succesful POST
 @property NSString *status_url;

@@ -54,18 +54,22 @@
     return YES;
 }
 
+/*
+ -- only needed for payments, which are gone for now
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
     PaymentController *dest = [segue destinationViewController];
     dest.lostItem = self.lostItem;
 }
+*/
 
 - (void)submitItem
 {
     self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
     [self.lostItem create:nil controller:self];
 }
+
 /**-- Creatable Controller Implementations --**/
 - (void)afterCreate
 {

@@ -26,13 +26,26 @@
     return self;
 }
 
+- (void)initializeSpinners
+{
+    NSInteger START_COLOR = 5;
+    NSInteger START_TYPE = 3;
+    
+    [self.colorSpinner selectRow:START_COLOR inComponent:0 animated:NO];
+    [self.categorySpinner selectRow:START_TYPE inComponent:0 animated:NO];
+    
+    self.foundItem.color = [[Constants colors] objectAtIndex:START_COLOR];
+    self.foundItem.type = [[Constants categories] objectAtIndex:START_TYPE];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.submitButton addTarget:self action:@selector(createItem) forControlEvents:UIControlEventTouchUpInside];
     self.foundItem = [[FoundItem alloc] init];
     self.foundItem.finder = [PlistOperations getFinderId];
-
+    
+    [self initializeSpinners];
 }
 
 - (void)didReceiveMemoryWarning
@@ -86,7 +99,7 @@
 /**-- Overrides of CreatableController --**/
 - (void)afterCreate
 {
-    [self.tabBarController setSelectedIndex:2];
+    [self.tabBarController setSelectedIndex:1];
 }
 
 @end
