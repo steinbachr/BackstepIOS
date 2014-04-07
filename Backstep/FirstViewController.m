@@ -10,7 +10,6 @@
 #import "LostItem.h"
 #import "BasicInfoController.h"
 #import "PlistOperations.h"
-#import "MyItemController.h"
 
 @interface FirstViewController ()
 
@@ -25,8 +24,8 @@
     NSDictionary* plist = [PlistOperations openPlist];
     if ([plist objectForKey:@"status_url"])
     {
-        MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
-        [self presentViewController:myItemController animated:NO completion:nil];
+        UIViewController *loserController = [self.storyboard instantiateViewControllerWithIdentifier:@"loserHome"];
+        [self.navigationController presentViewController:loserController animated:NO completion:nil];
     }
     
     // alloc space for a new lost item

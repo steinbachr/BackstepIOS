@@ -8,7 +8,6 @@
 
 #import "DetailsController.h"
 #import "PaymentController.h"
-#import "MyItemController.h"
 #import "LostItem.h"
 
 @interface DetailsController ()
@@ -73,8 +72,8 @@
 /**-- Creatable Controller Implementations --**/
 - (void)afterCreate
 {
-    MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
-    [self presentViewController:myItemController animated:NO completion:nil];
+    UIViewController *loserController = [self.storyboard instantiateViewControllerWithIdentifier:@"loserHome"];
+    [self presentViewController:loserController animated:NO completion:nil];
 }
 
 @end
