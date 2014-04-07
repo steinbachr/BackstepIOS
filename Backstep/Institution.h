@@ -9,8 +9,9 @@
 #import "JSONModel.h"
 #import "Gettable.h"
 #import "Tabular.h"
+#import "BackstepModel.h"
 
-@interface Institution : JSONModel<Gettable, Tabular>
+@interface Institution : JSONModel<Gettable, Tabular, BackstepModel>
 
 @property NSString *id;
 @property NSString *name;

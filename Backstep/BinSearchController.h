@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Gettable.h"
+#import "GettableController.h"
 
-@interface BinSearchController : UIViewController
+@interface BinSearchController : UITableViewController<UITableViewDelegate, UITableViewDataSource, GettableController>
+
+@property NSString *binCreatorId;
+@property BOOL institutionBin;
+@property NSMutableArray *bins;
 
 @end

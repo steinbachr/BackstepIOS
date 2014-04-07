@@ -20,7 +20,7 @@
 
 
 // Tabular Implementations
-+ (UIImage *)rowPicture
+- (UIImage *)rowPicture
 {
     return [UIImage imageNamed:@"school_icon"];
 }
@@ -28,6 +28,11 @@
 - (NSString *)rowTitle
 {
     return self.name;
+}
+
+- (NSString *) rowSubtitle
+{
+    return @"";
 }
 
 @end

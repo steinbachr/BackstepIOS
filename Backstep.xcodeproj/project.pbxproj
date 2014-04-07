@@ -47,6 +47,9 @@
 		C5AF7EF418F260E600DCE789 /* BinSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EF318F260E600DCE789 /* BinSearchController.m */; };
 		C5AF7EF718F269AE00DCE789 /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EF618F269AE00DCE789 /* City.m */; };
 		C5AF7EFD18F2770900DCE789 /* Institution.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EFC18F2770900DCE789 /* Institution.m */; };
+		C5AF7F0018F27A4300DCE789 /* Bin.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EFF18F27A4300DCE789 /* Bin.m */; };
+		C5AF7F0318F282F600DCE789 /* FoundSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7F0218F282F600DCE789 /* FoundSearchController.m */; };
+		C5AF7F0718F288B900DCE789 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7F0618F288B900DCE789 /* Images.m */; };
 		C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */; };
 		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
 		C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C19E7818DCB27B009D9D97 /* PlistOperations.m */; };
@@ -140,6 +143,13 @@
 		C5AF7EFA18F2739600DCE789 /* Tabular.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tabular.h; sourceTree = "<group>"; };
 		C5AF7EFB18F2770900DCE789 /* Institution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Institution.h; sourceTree = "<group>"; };
 		C5AF7EFC18F2770900DCE789 /* Institution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Institution.m; sourceTree = "<group>"; };
+		C5AF7EFE18F27A4300DCE789 /* Bin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bin.h; sourceTree = "<group>"; };
+		C5AF7EFF18F27A4300DCE789 /* Bin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bin.m; sourceTree = "<group>"; };
+		C5AF7F0118F282F600DCE789 /* FoundSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoundSearchController.h; sourceTree = "<group>"; };
+		C5AF7F0218F282F600DCE789 /* FoundSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundSearchController.m; sourceTree = "<group>"; };
+		C5AF7F0418F285D200DCE789 /* BackstepModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackstepModel.h; sourceTree = "<group>"; };
+		C5AF7F0518F288B900DCE789 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
+		C5AF7F0618F288B900DCE789 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
 		C5B88E4918DABD1B00F8FAF8 /* ConfirmationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmationController.h; sourceTree = "<group>"; };
 		C5B88E4A18DABD1B00F8FAF8 /* ConfirmationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmationController.m; sourceTree = "<group>"; };
 		C5B88E4C18DAC6E000F8FAF8 /* DismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissSegue.h; sourceTree = "<group>"; };
@@ -282,6 +292,8 @@
 				C5AF7EF618F269AE00DCE789 /* City.m */,
 				C5AF7EFB18F2770900DCE789 /* Institution.h */,
 				C5AF7EFC18F2770900DCE789 /* Institution.m */,
+				C5AF7EFE18F27A4300DCE789 /* Bin.h */,
+				C5AF7EFF18F27A4300DCE789 /* Bin.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -295,6 +307,8 @@
 				C551FE6118F09BC2002B3B85 /* ApiInterface.m */,
 				C5A6A18D18F1F0E900038AD2 /* Constants.h */,
 				C5A6A18E18F1F0E900038AD2 /* Constants.m */,
+				C5AF7F0518F288B900DCE789 /* Images.h */,
+				C5AF7F0618F288B900DCE789 /* Images.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -307,6 +321,7 @@
 				C528A49218F1206E00AAC2E3 /* Gettable.h */,
 				C528A49318F1258800AAC2E3 /* GettableController.h */,
 				C5AF7EFA18F2739600DCE789 /* Tabular.h */,
+				C5AF7F0418F285D200DCE789 /* BackstepModel.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -378,6 +393,8 @@
 				C5AF7EF018F260D400DCE789 /* LocationSearchController.m */,
 				C5AF7EF218F260E600DCE789 /* BinSearchController.h */,
 				C5AF7EF318F260E600DCE789 /* BinSearchController.m */,
+				C5AF7F0118F282F600DCE789 /* FoundSearchController.h */,
+				C5AF7F0218F282F600DCE789 /* FoundSearchController.m */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -530,9 +547,11 @@
 				C5AF7EFD18F2770900DCE789 /* Institution.m in Sources */,
 				C5AF7EEA18F21F1400DCE789 /* SourcingAttempt.m in Sources */,
 				C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */,
+				C5AF7F0718F288B900DCE789 /* Images.m in Sources */,
 				C551FE5B18F092F5002B3B85 /* FinderProfile.m in Sources */,
 				C551FE6218F09BC2002B3B85 /* ApiInterface.m in Sources */,
 				C536F0BC18DA1FC90088BB88 /* AppDelegate.m in Sources */,
+				C5AF7F0318F282F600DCE789 /* FoundSearchController.m in Sources */,
 				C5A6A18F18F1F0E900038AD2 /* Constants.m in Sources */,
 				C551FE5E18F09A6E002B3B85 /* User.m in Sources */,
 				C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */,
@@ -544,6 +563,7 @@
 				C5B88E4B18DABD1B00F8FAF8 /* ConfirmationController.m in Sources */,
 				C5AF7EF118F260D400DCE789 /* LocationSearchController.m in Sources */,
 				C56C5AB818DA6B1A0076D65D /* PaymentController.m in Sources */,
+				C5AF7F0018F27A4300DCE789 /* Bin.m in Sources */,
 				C536F0C518DA1FC90088BB88 /* FirstViewController.m in Sources */,
 				C551FE5618F09075002B3B85 /* FinderAccountTypeController.m in Sources */,
 				C536F0E818DA50610088BB88 /* LostItem.m in Sources */,

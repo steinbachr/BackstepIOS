@@ -9,17 +9,14 @@
 #import "FoundItem.h"
 #import "ApiInterface.h"
 #import "PlistOperations.h"
+#import "Images.h"
 
 @implementation FoundItem
 
 
 - (UIImage *)pictureAsImage
 {
-    NSURL *url = [NSURL URLWithString:self.picture];
-    NSData *imageData = [NSData dataWithContentsOfURL:url];
-    UIImage *image = [UIImage imageWithData:imageData];
-    
-    return image;
+    return [Images pictureAsImage:self.picture];
 }
 
 - (NSString *)description

@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *filterSegment;
 
-@property NSString *currentFilter;
 @property NSMutableArray *currentItems;
 @property NSMutableArray *cities;
 @property NSMutableArray *institutions;

@@ -7,6 +7,7 @@
 //
 
 #import "LocationSearchController.h"
+#import "BinSearchController.h"
 #import "City.h"
 #import "Institution.h"
 #import "Tabular.h"
@@ -43,12 +44,29 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    BinSearchController *binsController = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    JSONModel<Tabular,BackstepModel> *selected = [self.currentItems objectAtIndex:indexPath.row];
+    [binsController setTitle:[selected rowTitle]];
+    
+    binsController.binCreatorId = selected.id;
+    binsController.institutionBin = ![self cityFilterOn];
+}
+
+- (BOOL)cityFilterOn
+{
+    // 0 == yes
+    // > 0 == no
+    return [self.filterSegment selectedSegmentIndex] == 0;
+}
+
 /**-- Button Actions --**/
 - (void)filterTable
 {
-    // 0 == cities
-    // 1 == schools
-    if ([self.filterSegment selectedSegmentIndex] == 0) {
+    if ([self cityFilterOn]) {
         self.currentItems = self.cities;
     } else {
         self.currentItems = self.institutions;
@@ -78,7 +96,7 @@
     
     JSONModel<Tabular> *selected = [self.currentItems objectAtIndex:indexPath.row];
     cell.textLabel.text = [selected rowTitle];
-    cell.imageView.image = [selected.class rowPicture];
+    cell.imageView.image = [selected rowPicture];
     
     return cell;
 }

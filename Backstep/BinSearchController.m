@@ -7,6 +7,7 @@
 //
 
 #import "BinSearchController.h"
+#import "Bin.h"
 
 @interface BinSearchController ()
 
@@ -26,7 +27,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSString *filterType;
+    if (self.institutionBin) {
+        filterType = @"institution";
+    } else {
+        filterType = @"city";
+    }
+    
+    [Bin get:self filterType:filterType filterId:self.binCreatorId];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,15 +43,37 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+/**-- Table Implementation --**/
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    return [self.bins count];
 }
-*/
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell"];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"locationCell"];
+    }
+    
+    JSONModel<Tabular> *selected = [self.bins objectAtIndex:indexPath.row];
+    cell.textLabel.text = [selected rowTitle];
+    cell.detailTextLabel.text = [selected rowSubtitle];
+    cell.imageView.image = [selected rowPicture];
+    
+    return cell;
+}
+
+/**-- GettableController implementation --**/
+- (void)afterGet:(id)json
+{
+    self.bins = [Bin arrayOfModelsFromDictionaries:json];
+    [self.tableView reloadData];
+}
 
 @end

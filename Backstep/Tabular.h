@@ -10,7 +10,8 @@
 
 @protocol Tabular <NSObject>
 
-+ (UIImage *) rowPicture;
+- (UIImage *) rowPicture;
 - (NSString *) rowTitle;
+- (NSString *) rowSubtitle;
 
 @end
