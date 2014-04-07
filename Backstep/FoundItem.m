@@ -24,6 +24,12 @@
     return [NSString stringWithFormat:@"%@ %@", self.color, self.type];
 }
 
++ (void)get:(UIViewController<GettableController> *)controller binId:(NSString *)binId
+{
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?bin=%@", binId];
+    [ApiInterface getList:url controller:controller];
+}
+
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller
 {
@@ -43,6 +49,27 @@
 
 - (void) afterCreate:(id) json
 {
+}
+
+// Tabular Implementations
+- (UIImage *)rowPicture
+{
+    UIImage *image = [self pictureAsImage];
+    if (image) {
+        return image;
+    } else {
+        return [UIImage imageNamed:@"missing_picture_icon"];
+    }
+}
+
+- (NSString *)rowTitle
+{
+    return [self description];
+}
+
+- (NSString *) rowSubtitle
+{
+    return self.identifying_characteristics;
 }
 
 @end

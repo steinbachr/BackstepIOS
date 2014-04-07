@@ -9,8 +9,9 @@
 #import "JSONModel.h"
 #import "Gettable.h"
 #import "Creatable.h"
+#import "Tabular.h"
 
-@interface FoundItem : JSONModel<Gettable, Creatable>
+@interface FoundItem : JSONModel<Gettable, Creatable, Tabular>
 
 @property NSString *id;
 @property NSString *finder;
@@ -21,5 +22,8 @@
 
 - (UIImage *)pictureAsImage;
 - (NSString *)description;
+
+// when a user is looking at found items in a bin, we require knowledge of the bin, so use a specific implementation of get
++ (void)get:(UIViewController<GettableController> *)controller binId:(NSString *)binId;
 
 @end

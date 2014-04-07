@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GettableController.h"
 
-@interface FoundSearchController : UITableViewController
+@interface FoundSearchController : UITableViewController<UITableViewDataSource, UITableViewDelegate, GettableController>
+
+@property NSString *binId;
+@property NSMutableArray *items;
 
 @end

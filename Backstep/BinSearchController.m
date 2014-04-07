@@ -7,6 +7,7 @@
 //
 
 #import "BinSearchController.h"
+#import "FoundSearchController.h"
 #import "Bin.h"
 
 @interface BinSearchController ()
@@ -43,6 +44,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    FoundSearchController *foundController = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    
+    JSONModel<Tabular,BackstepModel> *selected = [self.bins objectAtIndex:indexPath.row];
+    [foundController setTitle:[selected rowTitle]];
+    
+    foundController.binId = selected.id;    
+}
+
 /**-- Table Implementation --**/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -55,10 +67,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"locationCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"binCell"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"locationCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"binCell"];
     }
     
     JSONModel<Tabular> *selected = [self.bins objectAtIndex:indexPath.row];
