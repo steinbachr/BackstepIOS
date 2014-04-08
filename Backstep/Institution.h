@@ -15,7 +15,11 @@
 
 @property NSString *id;
 @property NSString *name;
+@property NSString *category;
 @property NSString *phone_preferred;
 @property NSString *email_preferred;
+
+// Institution gettable relies on knowing the cityId, so we override here
++ (void)get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId;
 
 @end

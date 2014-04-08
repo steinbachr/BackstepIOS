@@ -1,20 +1,21 @@
 //
-//  BinSearchController.m
+//  CitiesSearchController.m
 //  Backstep
 //
-//  Created by Robert Steinbach on 4/6/14.
+//  Created by Robert Steinbach on 4/7/14.
 //  Copyright (c) 2014 Backstep. All rights reserved.
 //
 
-#import "BinSearchController.h"
-#import "FoundSearchController.h"
-#import "Bin.h"
+#import "CitiesSearchController.h"
+#import "FindersSearchController.h"
+#import "City.h"
+#import "BackstepModel.h"
 
-@interface BinSearchController ()
+@interface CitiesSearchController ()
 
 @end
 
-@implementation BinSearchController
+@implementation CitiesSearchController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [Bin get:self filterType:@"institution" filterId:self.binCreatorId];
+    [City get:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,19 +40,18 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    FoundSearchController *foundController = [segue destinationViewController];
+    FindersSearchController *findersController = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    City *selectedCity = [self.cities objectAtIndex:indexPath.row];
     
-    JSONModel<Tabular,BackstepModel> *selected = [self.bins objectAtIndex:indexPath.row];
-    [foundController setTitle:[selected rowTitle]];
-    
-    foundController.binId = selected.id;    
+    [findersController setTitle:selectedCity.name];
+    findersController.selectedCity = selectedCity;
 }
 
 /**-- Table Implementation --**/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.bins count];
+    return [self.cities count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -60,13 +60,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"binCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cityCell"];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"binCell"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"cityCell"];
     }
     
-    JSONModel<Tabular> *selected = [self.bins objectAtIndex:indexPath.row];
+    JSONModel<Tabular> *selected = [self.cities objectAtIndex:indexPath.row];
     cell.textLabel.text = [selected rowTitle];
     cell.detailTextLabel.text = [selected rowSubtitle];
     cell.imageView.image = [selected rowPicture];
@@ -77,7 +77,7 @@
 /**-- GettableController implementation --**/
 - (void)afterGet:(id)json
 {
-    self.bins = [Bin arrayOfModelsFromDictionaries:json];
+    self.cities = [City arrayOfModelsFromDictionaries:json];
     [self.tableView reloadData];
 }
 

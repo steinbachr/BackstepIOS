@@ -32,7 +32,7 @@
 
 - (NSString *) rowSubtitle
 {
-    return @"";
+    return [NSString stringWithFormat:@"(%d bins, %d found items)", self.num_bins, self.num_found_items];
 }
 
 @end

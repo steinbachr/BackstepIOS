@@ -13,7 +13,6 @@
 @interface BinSearchController : UITableViewController<UITableViewDelegate, UITableViewDataSource, GettableController>
 
 @property NSString *binCreatorId;
-@property BOOL institutionBin;
 @property NSMutableArray *bins;
 
 @end

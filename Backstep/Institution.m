@@ -11,6 +11,13 @@
 
 @implementation Institution
 
+
++ (void)get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId
+{
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/cities/%@/finders/", cityId];
+    [ApiInterface getList:url controller:controller];
+}
+
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller
 {
@@ -22,7 +29,11 @@
 // Tabular Implementations
 - (UIImage *)rowPicture
 {
-    return [UIImage imageNamed:@"school_icon"];
+    if ([self.category isEqualToString:@"school"]) {
+        return [UIImage imageNamed:@"school_icon"];
+    } else {
+        return [UIImage imageNamed:@"police_icon"];
+    }
 }
 
 - (NSString *)rowTitle

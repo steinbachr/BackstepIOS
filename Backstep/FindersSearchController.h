@@ -8,14 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "GettableController.h"
+#import "City.h"
 
-@interface LocationSearchController : UIViewController<UITableViewDelegate, UITableViewDataSource, GettableController>
+@interface FindersSearchController : UIViewController<UITableViewDelegate, UITableViewDataSource, GettableController>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *filterSegment;
 
-@property NSMutableArray *currentItems;
-@property NSMutableArray *cities;
-@property NSMutableArray *institutions;
+@property City *selectedCity;
+@property NSMutableArray *finders;
+@property NSMutableArray *filtered;
 
 @end

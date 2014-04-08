@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Backstep. All rights reserved.
 //
 
-#import "LocationSearchController.h"
+#import "FindersSearchController.h"
 #import "BinSearchController.h"
 #import "City.h"
 #import "Institution.h"
 #import "Tabular.h"
 
-@interface LocationSearchController ()
+@interface FindersSearchController ()
 
 @end
 
-@implementation LocationSearchController
+@implementation FindersSearchController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,8 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [City get:self];
-    [Institution get:self];
+    [Institution get:self cityId:self.selectedCity.id];
     
     [self.filterSegment addTarget: self
                            action: @selector(filterTable)
@@ -49,29 +48,35 @@
     BinSearchController *binsController = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     
-    JSONModel<Tabular,BackstepModel> *selected = [self.currentItems objectAtIndex:indexPath.row];
-    [binsController setTitle:[selected rowTitle]];
-    
+    Institution *selected = [self.finders objectAtIndex:indexPath.row];
+    [binsController setTitle:selected.name];
     binsController.binCreatorId = selected.id;
-    binsController.institutionBin = ![self cityFilterOn];
 }
 
-- (BOOL)cityFilterOn
+- (NSMutableArray *)filterFindersByCat:(NSMutableArray *)institutions cat:(NSString *)cat
 {
-    // 0 == yes
-    // > 0 == no
-    return [self.filterSegment selectedSegmentIndex] == 0;
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for (int i = 0 ; i < [institutions count] ; i++) {
+        Institution *current = [institutions objectAtIndex:i];
+        if ([current.category isEqualToString:cat]) {
+            [result addObject:current];
+        }
+    }
+    
+    return result;
 }
 
 /**-- Button Actions --**/
 - (void)filterTable
 {
-    if ([self cityFilterOn]) {
-        self.currentItems = self.cities;
+    NSString *category;
+    if ([self.filterSegment selectedSegmentIndex] == 0) {
+        category = @"police";
     } else {
-        self.currentItems = self.institutions;
+        category = @"school";
     }
-
+    
+    self.filtered = [self filterFindersByCat:self.finders cat:category];
     [self.tableView reloadData];
 }
 
@@ -79,7 +84,7 @@
 /**-- Table Implementation --**/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.currentItems count];
+    return [self.filtered count];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -94,7 +99,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"locationCell"];
     }
     
-    JSONModel<Tabular> *selected = [self.currentItems objectAtIndex:indexPath.row];
+    JSONModel<Tabular> *selected = [self.filtered objectAtIndex:indexPath.row];
     cell.textLabel.text = [selected rowTitle];
     cell.imageView.image = [selected rowPicture];
     
@@ -105,19 +110,8 @@
 /**-- GettableController implementation --**/
 - (void)afterGet:(id)json
 {
-    if ([json count] > 0) {
-        NSDictionary *sample = [json objectAtIndex:0];
-        // check if sample has a value unique to institution, if not then it was a city call
-        if ([sample objectForKey:@"phone_preferred"]) {
-            self.institutions = [Institution arrayOfModelsFromDictionaries:json];
-        } else {
-            self.cities = [City arrayOfModelsFromDictionaries:json];
-        }
-        self.currentItems = self.cities;
-        [self.tableView reloadData];
-    } else {
-        //handle error, we should never have NO institutions or cities
-    }
+    self.finders = [Institution arrayOfModelsFromDictionaries:json];
+    [self filterTable];
 }
 
 

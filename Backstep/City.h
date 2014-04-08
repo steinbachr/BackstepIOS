@@ -14,5 +14,7 @@
 
 @property NSString *id;
 @property NSString *name;
+@property NSInteger num_bins;
+@property NSInteger num_found_items;
 
 @end
