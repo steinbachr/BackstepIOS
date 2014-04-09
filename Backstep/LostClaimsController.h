@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GettableController.h"
+#import "SourcingAttempt.h"
 
-@interface LostClaimsController : UITableViewController
+@interface LostClaimsController : UITableViewController<GettableController>
+
+@property NSArray* attempts;
 
 @end

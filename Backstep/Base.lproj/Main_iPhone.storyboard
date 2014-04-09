@@ -621,57 +621,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="WVv-N1-m3l" kind="relationship" relationship="viewControllers" id="WxW-v6-T92"/>
-                        <segue destination="TCF-7e-Qbk" kind="relationship" relationship="viewControllers" id="Vvi-6g-Er3"/>
+                        <segue destination="AV6-Fy-EEL" kind="relationship" relationship="viewControllers" id="fFV-kb-No6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZK0-r3-6gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1651" y="1432"/>
-        </scene>
-        <!--My Item Controller - Claims-->
-        <scene sceneID="RGh-Ex-G9P">
-            <objects>
-                <viewController storyboardIdentifier="myItemController" id="TCF-7e-Qbk" customClass="MyItemController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t6u-wv-aBY"/>
-                        <viewControllerLayoutGuide type="bottom" id="XPf-z3-naa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XAl-QI-Nae">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o3y-3G-MH8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="341"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGr-d7-2er">
-                                <rect key="frame" x="74" y="425" width="173" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.98823535439999999" green="0.72941178080000002" blue="0.28627452250000002" alpha="1" colorSpace="deviceRGB"/>
-                                <state key="normal" title="Lost Another Item">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwq-b8-M8C">
-                                <rect key="frame" x="74" y="28" width="173" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Claims" image="tabs_requests" id="gCc-L7-FeU"/>
-                    <connections>
-                        <outlet property="itemName" destination="kwq-b8-M8C" id="QFV-iN-s3c"/>
-                        <outlet property="itemWebView" destination="o3y-3G-MH8" id="F5z-m5-Pxl"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GcJ-Dv-jUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2281" y="1627"/>
         </scene>
         <!--Finder Account Type Controller - You-->
         <scene sceneID="IIH-Cd-Iqk">
@@ -1068,6 +1023,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXP-NL-JPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2281" y="954"/>
+        </scene>
+        <!--Lost Claims Controller - Claims-->
+        <scene sceneID="4AL-cN-1NY">
+            <objects>
+                <tableViewController id="AV6-Fy-EEL" customClass="LostClaimsController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="reX-PH-doE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lostItemClaimCell" textLabel="uRQ-zm-jL6" detailTextLabel="NZh-Co-67e" rowHeight="64" style="IBUITableViewCellStyleSubtitle" id="xin-3H-83Q">
+                                <rect key="frame" x="0.0" y="22" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xin-3H-83Q" id="zSa-2Z-LTR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uRQ-zm-jL6">
+                                            <rect key="frame" x="15" y="13" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NZh-Co-67e">
+                                            <rect key="frame" x="15" y="35" width="32" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="AV6-Fy-EEL" id="2xK-OX-S3G"/>
+                            <outlet property="delegate" destination="AV6-Fy-EEL" id="Zph-Gc-0sl"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Claims" image="tabs_requests" id="bTb-eQ-4NS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oCh-he-lMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2295" y="1626"/>
         </scene>
     </scenes>
     <resources>

@@ -9,7 +9,6 @@
 #import "ConfirmationController.h"
 #import "JSONHTTPClient.h"
 #import "PlistOperations.h"
-#import "MyItemController.h"
 
 @interface ConfirmationController ()
 
@@ -46,9 +45,9 @@
 }
 
 /**-- Creatable Controller Implementations --**/
-- (void)afterCreate
-{
-    MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
-    [self presentViewController:myItemController animated:NO completion:nil];
-}
+//- (void)afterCreate
+//{
+//    MyItemController *myItemController = [self.storyboard instantiateViewControllerWithIdentifier:@"myItemController"];
+//    [self presentViewController:myItemController animated:NO completion:nil];
+//}
 @end

@@ -12,6 +12,12 @@
 
 @implementation SourcingAttempt
 
++ (void)get:(UIViewController<GettableController> *)controller lostId:(NSString *)lostId
+{
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/attempts/?lost_item=%@", @"163"];
+    [ApiInterface getList:url controller:controller];
+}
+
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller
 {

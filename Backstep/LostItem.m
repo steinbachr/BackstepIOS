@@ -7,7 +7,6 @@
 //
 
 #import "LostItem.h"
-#import "MyItemController.h"
 #import "PlistOperations.h"
 #import "JSONHTTPClient.h"
 #import "ApiInterface.h"

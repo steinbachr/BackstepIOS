@@ -21,5 +21,6 @@
 // Specific methods
 + (NSString *) getFinderId;
 + (LostItem *) getLostItem;
++ (NSString *) getLostItemId;
 
 @end

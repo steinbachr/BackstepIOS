@@ -90,4 +90,10 @@
     return item;
 }
 
++ (NSString *) getLostItemId
+{
+    LostItem *lostItem = [PlistOperations getLostItem];
+    return lostItem.id;
+}
+
 @end
