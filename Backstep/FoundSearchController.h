@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "GettableController.h"
+#import "CreatableController.h"
 
-@interface FoundSearchController : UITableViewController<UITableViewDataSource, UITableViewDelegate, GettableController>
+@interface FoundSearchController : UITableViewController<UITableViewDataSource, UITableViewDelegate, GettableController, CreatableController>
 
+@property NSInteger currentAttemptIndex;
 @property NSString *binId;
 @property NSMutableArray *items;
 

@@ -10,6 +10,7 @@
 #import "ApiInterface.h"
 #import "PlistOperations.h"
 #import "Images.h"
+#import "SourcingAttempt.h"
 
 @implementation FoundItem
 
@@ -29,6 +30,7 @@
     NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?bin=%@", binId];
     [ApiInterface getList:url controller:controller];
 }
+
 
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller

@@ -54,6 +54,8 @@
 		C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B88E4D18DAC6E000F8FAF8 /* DismissSegue.m */; };
 		C5C19E7918DCB27B009D9D97 /* PlistOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = C5C19E7818DCB27B009D9D97 /* PlistOperations.m */; };
 		C5D463F218F3B1F400D27DA7 /* CitiesSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D463F118F3B1F400D27DA7 /* CitiesSearchController.m */; };
+		C5D463F618F46FA000D27DA7 /* LostClaimsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D463F518F46FA000D27DA7 /* LostClaimsController.m */; };
+		C5D463F918F4766800D27DA7 /* MakeClaimCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D463F818F4766800D27DA7 /* MakeClaimCell.m */; };
 		C5F082C818DB697500E7AD27 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F082C718DB697500E7AD27 /* QuartzCore.framework */; };
 		C5F082CA18DB9CDF00E7AD27 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = C5F082C918DB9CDF00E7AD27 /* Data.plist */; };
 		C5F082CD18DBA9A200E7AD27 /* MyItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5F082CC18DBA9A200E7AD27 /* MyItemController.m */; };
@@ -159,6 +161,10 @@
 		C5C19E7818DCB27B009D9D97 /* PlistOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistOperations.m; sourceTree = "<group>"; };
 		C5D463F018F3B1F400D27DA7 /* CitiesSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CitiesSearchController.h; sourceTree = "<group>"; };
 		C5D463F118F3B1F400D27DA7 /* CitiesSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CitiesSearchController.m; sourceTree = "<group>"; };
+		C5D463F418F46FA000D27DA7 /* LostClaimsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LostClaimsController.h; sourceTree = "<group>"; };
+		C5D463F518F46FA000D27DA7 /* LostClaimsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LostClaimsController.m; sourceTree = "<group>"; };
+		C5D463F718F4766800D27DA7 /* MakeClaimCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeClaimCell.h; sourceTree = "<group>"; };
+		C5D463F818F4766800D27DA7 /* MakeClaimCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeClaimCell.m; sourceTree = "<group>"; };
 		C5F082C718DB697500E7AD27 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C5F082C918DB9CDF00E7AD27 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		C5F082CB18DBA9A200E7AD27 /* MyItemController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyItemController.h; sourceTree = "<group>"; };
@@ -332,12 +338,7 @@
 		C551FE6618F0A43A002B3B85 /* FinderControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C551FE5418F09075002B3B85 /* FinderAccountTypeController.h */,
-				C551FE5518F09075002B3B85 /* FinderAccountTypeController.m */,
-				C551FE6A18F0A4AC002B3B85 /* FinderAccountBasicInfoController.h */,
-				C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */,
-				C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */,
-				C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */,
+				C5A9ADDB18F48D26008FA423 /* Account */,
 				C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */,
 				C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */,
 				C528A48C18F11EE200AAC2E3 /* FoundItemsController.h */,
@@ -353,10 +354,24 @@
 		C551FE7018F0CD89002B3B85 /* LostItemControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C5D463F318F46F7600D27DA7 /* Claims */,
 				C5AF7EF918F26B7D00DCE789 /* Search */,
 				C5AF7EF818F26B5F00DCE789 /* Account */,
 			);
 			name = LostItemControllers;
+			sourceTree = "<group>";
+		};
+		C5A9ADDB18F48D26008FA423 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C551FE5418F09075002B3B85 /* FinderAccountTypeController.h */,
+				C551FE5518F09075002B3B85 /* FinderAccountTypeController.m */,
+				C551FE6A18F0A4AC002B3B85 /* FinderAccountBasicInfoController.h */,
+				C551FE6B18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m */,
+				C551FE6D18F0C24B002B3B85 /* FinderAccountInstitutionController.h */,
+				C551FE6E18F0C24B002B3B85 /* FinderAccountInstitutionController.m */,
+			);
+			name = Account;
 			sourceTree = "<group>";
 		};
 		C5AF7EEB18F224B400DCE789 /* Views */ = {
@@ -364,6 +379,8 @@
 			children = (
 				C5AF7EEC18F224DA00DCE789 /* MatchTableViewCell.h */,
 				C5AF7EED18F224DA00DCE789 /* MatchTableViewCell.m */,
+				C5D463F718F4766800D27DA7 /* MakeClaimCell.h */,
+				C5D463F818F4766800D27DA7 /* MakeClaimCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -402,6 +419,15 @@
 				C5D463F118F3B1F400D27DA7 /* CitiesSearchController.m */,
 			);
 			name = Search;
+			sourceTree = "<group>";
+		};
+		C5D463F318F46F7600D27DA7 /* Claims */ = {
+			isa = PBXGroup;
+			children = (
+				C5D463F418F46FA000D27DA7 /* LostClaimsController.h */,
+				C5D463F518F46FA000D27DA7 /* LostClaimsController.m */,
+			);
+			name = Claims;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -542,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C551FE6C18F0A4AC002B3B85 /* FinderAccountBasicInfoController.m in Sources */,
+				C5D463F918F4766800D27DA7 /* MakeClaimCell.m in Sources */,
 				C5D463F218F3B1F400D27DA7 /* CitiesSearchController.m in Sources */,
 				C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */,
 				C5AF7EEE18F224DA00DCE789 /* MatchTableViewCell.m in Sources */,
@@ -549,6 +576,7 @@
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,
 				C5A6A18518F1DEB500038AD2 /* NewItemController.m in Sources */,
 				C536F0EB18DA51CD0088BB88 /* BasicInfoController.m in Sources */,
+				C5D463F618F46FA000D27DA7 /* LostClaimsController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
 				C5AF7EFD18F2770900DCE789 /* Institution.m in Sources */,
 				C5AF7EEA18F21F1400DCE789 /* SourcingAttempt.m in Sources */,

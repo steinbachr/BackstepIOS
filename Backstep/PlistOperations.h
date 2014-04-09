@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LostItem.h"
 
 @interface PlistOperations : NSObject
 
@@ -19,5 +20,6 @@
 
 // Specific methods
 + (NSString *) getFinderId;
++ (LostItem *) getLostItem;
 
 @end

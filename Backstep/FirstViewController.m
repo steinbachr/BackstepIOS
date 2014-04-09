@@ -22,7 +22,7 @@
     [super viewDidLoad];
     
     NSDictionary* plist = [PlistOperations openPlist];
-    if ([plist objectForKey:@"status_url"])
+    if ([plist objectForKey:@"item_json"])
     {
         UIViewController *loserController = [self.storyboard instantiateViewControllerWithIdentifier:@"loserHome"];
         [self.navigationController presentViewController:loserController animated:NO completion:nil];

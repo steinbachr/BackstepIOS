@@ -26,12 +26,7 @@ extern NSString *InfoRequiredMessage;
 @property NSString<Optional> *charge_token;
 
 // both returned as a result from a succesful POST
-@property NSString *status_url;
-@property NSString *description;
-
-// this method writes the statusURL and normalized description to Data.plist
-- (void)saveItem:(LostItem *)item controller:(UIViewController *)controller;
-//this method saves the item on our server and then writes the response to our Data.plist
-+ (void)submitItem:(LostItem *)item controller:(UIViewController *)controller indicator:(UIActivityIndicatorView *)indicator;
+@property NSString<Optional> *status_url;
+@property NSString<Optional> *description;
 
 @end

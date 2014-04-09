@@ -81,4 +81,13 @@
     return [PlistOperations plistVal:@"finder_id"];
 }
 
++ (LostItem *) getLostItem
+{
+    NSString *json = [PlistOperations plistVal:@"item_json"];
+    NSError* err = nil;
+    LostItem *item = [[LostItem alloc] initWithString:json error:&err];
+    
+    return item;
+}
+
 @end
