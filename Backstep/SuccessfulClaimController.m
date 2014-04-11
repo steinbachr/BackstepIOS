@@ -47,7 +47,7 @@
     self.finderImage.image = [self.successfulAttemptInst iconForCategory];
     [self initLabelHelper:self.finderName val:self.successfulAttemptInst.name];
     [self initLabelHelper:self.finderEmail val:self.successfulAttemptUser.email];
-    [self initLabelHelper:self.finderPhone val:@"N/A"];
+    [self initLabelHelper:self.finderPhone val:self.successfulAttemptInst.phone];
     [self initLabelHelper:self.finderCity val:self.successfulAttemptInst.city];
     [self initLabelHelper:self.finderState val:self.successfulAttemptInst.state];
     [self initLabelHelper:self.finderAddress val:self.successfulAttemptInst.address];

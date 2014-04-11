@@ -20,6 +20,7 @@
 @property NSString *email_preferred;
 
 // fetched in GET requests, not required in POST
+@property NSString<Optional> *phone;
 @property NSString<Optional> *city;
 @property NSString<Optional> *state;
 @property NSString<Optional> *address;
