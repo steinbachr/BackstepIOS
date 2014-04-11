@@ -18,6 +18,16 @@
     [ApiInterface getList:url controller:controller];
 }
 
+- (UIImage *) iconForCategory
+{
+    if ([self.category isEqualToString:@"school"]) {
+        return [UIImage imageNamed:@"school_icon"];
+    } else {
+        return [UIImage imageNamed:@"police_icon"];
+    }
+}
+
+
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller
 {
@@ -29,11 +39,7 @@
 // Tabular Implementations
 - (UIImage *)rowPicture
 {
-    if ([self.category isEqualToString:@"school"]) {
-        return [UIImage imageNamed:@"school_icon"];
-    } else {
-        return [UIImage imageNamed:@"police_icon"];
-    }
+    return [self iconForCategory];
 }
 
 - (NSString *)rowTitle

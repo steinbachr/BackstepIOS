@@ -15,10 +15,9 @@
 
 @property NSString *id;
 @property NSString *email;
-@property NSString *password;
 
-// we need to know about a finder instance so that we can set the user id for the finder after this user is created
-// on the server
-@property FinderProfile *finder;
+//needed for writing, not for reading
+@property FinderProfile<Optional> *finder;
+@property NSString<Optional> *password;
 
 @end

@@ -41,6 +41,7 @@
 		C5A6A18518F1DEB500038AD2 /* NewItemController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6A18418F1DEB500038AD2 /* NewItemController.m */; };
 		C5A6A18F18F1F0E900038AD2 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6A18E18F1F0E900038AD2 /* Constants.m */; };
 		C5A6A19218F2192100038AD2 /* MatchesController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A6A19118F2192100038AD2 /* MatchesController.m */; };
+		C5A9ADDE18F4FFB5008FA423 /* SuccessfulClaimController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5A9ADDD18F4FFB5008FA423 /* SuccessfulClaimController.m */; };
 		C5AF7EEA18F21F1400DCE789 /* SourcingAttempt.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EE918F21F1400DCE789 /* SourcingAttempt.m */; };
 		C5AF7EEE18F224DA00DCE789 /* MatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EED18F224DA00DCE789 /* MatchTableViewCell.m */; };
 		C5AF7EF118F260D400DCE789 /* FindersSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5AF7EF018F260D400DCE789 /* FindersSearchController.m */; };
@@ -132,6 +133,8 @@
 		C5A6A18E18F1F0E900038AD2 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C5A6A19018F2192100038AD2 /* MatchesController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchesController.h; sourceTree = "<group>"; };
 		C5A6A19118F2192100038AD2 /* MatchesController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchesController.m; sourceTree = "<group>"; };
+		C5A9ADDC18F4FFB5008FA423 /* SuccessfulClaimController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccessfulClaimController.h; sourceTree = "<group>"; };
+		C5A9ADDD18F4FFB5008FA423 /* SuccessfulClaimController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccessfulClaimController.m; sourceTree = "<group>"; };
 		C5AF7EE818F21F1400DCE789 /* SourcingAttempt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourcingAttempt.h; sourceTree = "<group>"; };
 		C5AF7EE918F21F1400DCE789 /* SourcingAttempt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourcingAttempt.m; sourceTree = "<group>"; };
 		C5AF7EEC18F224DA00DCE789 /* MatchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchTableViewCell.h; sourceTree = "<group>"; };
@@ -421,6 +424,8 @@
 			children = (
 				C5D463F418F46FA000D27DA7 /* LostClaimsController.h */,
 				C5D463F518F46FA000D27DA7 /* LostClaimsController.m */,
+				C5A9ADDC18F4FFB5008FA423 /* SuccessfulClaimController.h */,
+				C5A9ADDD18F4FFB5008FA423 /* SuccessfulClaimController.m */,
 			);
 			name = Claims;
 			sourceTree = "<group>";
@@ -574,6 +579,7 @@
 				C5D463F618F46FA000D27DA7 /* LostClaimsController.m in Sources */,
 				C5B88E4E18DAC6E000F8FAF8 /* DismissSegue.m in Sources */,
 				C5AF7EFD18F2770900DCE789 /* Institution.m in Sources */,
+				C5A9ADDE18F4FFB5008FA423 /* SuccessfulClaimController.m in Sources */,
 				C5AF7EEA18F21F1400DCE789 /* SourcingAttempt.m in Sources */,
 				C551FE6F18F0C24B002B3B85 /* FinderAccountInstitutionController.m in Sources */,
 				C5AF7F0718F288B900DCE789 /* Images.m in Sources */,

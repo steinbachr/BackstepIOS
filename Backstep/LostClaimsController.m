@@ -7,6 +7,7 @@
 //
 
 #import "LostClaimsController.h"
+#import "SuccessfulClaimController.h"
 #import "PlistOperations.h"
 
 @interface LostClaimsController ()
@@ -61,10 +62,32 @@
 
 
 /**-- GettableController implementation --**/
+// check if any of self.attempts is a successful attempt. If so, return it. If not, return nil
+- (SourcingAttempt *)successfulAttempt
+{
+    for (int i = 0 ;  i < [self.attempts count] ; i++) {
+        SourcingAttempt *curAttempt = [self.attempts objectAtIndex:i];
+        if (curAttempt.success) {
+            return curAttempt;
+        }
+    }
+    
+    return nil;
+}
+
 - (void)afterGet:(id)json
 {
     self.attempts = [SourcingAttempt arrayOfModelsFromDictionaries:json];
-    [self.tableView reloadData];
+    
+    /* if any of the attempts were a success, then present the successful claim controller modal */
+    SourcingAttempt *successfulAttempt = [self successfulAttempt];
+    if (successfulAttempt) {
+        SuccessfulClaimController *successController = [self.storyboard instantiateViewControllerWithIdentifier:@"successfulClaimController"];
+        successController.successfulAttempt = successfulAttempt;
+        [self presentViewController:successController animated:NO completion:nil];
+    } else {
+        [self.tableView reloadData];
+    }
 }
 
 

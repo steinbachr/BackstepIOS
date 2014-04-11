@@ -19,7 +19,13 @@
 @property NSString *phone_preferred;
 @property NSString *email_preferred;
 
+// fetched in GET requests, not required in POST
+@property NSString<Optional> *city;
+@property NSString<Optional> *state;
+@property NSString<Optional> *address;
+
 // Institution gettable relies on knowing the cityId, so we override here
-+ (void)get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId;
++ (void) get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId;
+- (UIImage *) iconForCategory;
 
 @end

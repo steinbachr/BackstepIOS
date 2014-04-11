@@ -6,7 +6,7 @@
          contextName = "__35+[ApiInterface getList:controller:]_block_invoke:ApiInterface.m">
       </ContextState>
       <ContextState
-         contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
+         contextName = "-[FirstViewController shouldPerformSegueWithIdentifier:sender:]:FirstViewController.m">
       </ContextState>
       <ContextState
          contextName = "-[FoundItemsController tableView:cellForRowAtIndexPath:]:FoundItemsController.m">
@@ -25,7 +25,7 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[FirstViewController shouldPerformSegueWithIdentifier:sender:]:FirstViewController.m">
+         contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "__36-[ConfirmationController submitItem]_block_invoke:ConfirmationController.m">
@@ -60,10 +60,26 @@
          contextName = "-[FoundItemsController afterGet:]:FoundItemsController.m">
       </ContextState>
       <ContextState
+         contextName = "-[LostClaimsController afterGet:]:LostClaimsController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ColorPicker pickerView:numberOfRowsInComponent:]:ColorPicker.m">
          <PersistentStrings>
             <PersistentString
                value = "self.colorArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[SuccessfulClaimController afterGet:]:SuccessfulClaimController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[json arrayOfModelsFromDictionaries]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

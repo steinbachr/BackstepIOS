@@ -11,6 +11,7 @@
 #import "Creatable.h"
 #import "FoundItem.h"
 #import "LostItem.h"
+#import "Institution.h"
 
 @interface SourcingAttempt : JSONModel<Gettable, Creatable>
 
@@ -23,5 +24,7 @@
 
 // get attempts for a lost item (this is the method used from the loser branch of the application)
 + (void)get:(UIViewController<GettableController> *)controller lostId:(NSString *)lostId;
+// get the finder for a specific sourcing attempt
+- (void)getFinder:(UIViewController<GettableController> *)controller;
 
 @end

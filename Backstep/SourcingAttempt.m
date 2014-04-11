@@ -14,7 +14,13 @@
 
 + (void)get:(UIViewController<GettableController> *)controller lostId:(NSString *)lostId
 {
-    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/attempts/?lost_item=%@", @"163"];
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/attempts/?lost_item=%@", lostId];
+    [ApiInterface getList:url controller:controller];
+}
+
+- (void)getFinder:(UIViewController<GettableController> *)controller
+{
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/attempts/%@/finder/", self.id];
     [ApiInterface getList:url controller:controller];
 }
 
