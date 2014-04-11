@@ -41,8 +41,24 @@
                     controller: controller];
 }
 
+// add this attempt's found item id to a comma separated list of id's, so we don't show the item in search results
 - (void) afterCreate:(id) json
 {
+    NSString *foundItemIds = [PlistOperations getFoundItemAttempts];
+    
+    NSDictionary *newFoundItemDict = [json objectForKey:@"found_item"];
+    NSString *newFoundItemId = [[newFoundItemDict objectForKey:@"id"] stringValue];
+    
+    NSString *newIdsString;
+    if (foundItemIds) {
+        newIdsString = [NSString stringWithFormat:@"%@,%@", foundItemIds, newFoundItemId];
+    } else {
+        newIdsString = newFoundItemId;
+    }
+    
+    [PlistOperations writeToPlist: [NSArray arrayWithObjects: newIdsString, nil]
+                             keys: [NSArray arrayWithObjects: @"attempt_ids", nil]
+                         doAppend: YES];
 }
 
 

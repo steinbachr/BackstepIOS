@@ -25,9 +25,10 @@
     return [NSString stringWithFormat:@"%@ %@", self.color, self.type];
 }
 
+// GET implentation for the lost item fork
 + (void)get:(UIViewController<GettableController> *)controller binId:(NSString *)binId
 {
-    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?bin=%@", binId];
+    NSString *url = [NSString stringWithFormat:@"http://www.back-step.com/api/found/?bin=%@&is_matched=False", binId];
     [ApiInterface getList:url controller:controller];
 }
 
@@ -60,7 +61,7 @@
     if (image) {
         return image;
     } else {
-        return [UIImage imageNamed:@"missing_picture_icon"];
+        return [UIImage imageNamed:@"missing_image_icon"];
     }
 }
 

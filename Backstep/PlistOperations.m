@@ -1,10 +1,10 @@
-//
-//  PlistOperations.m
-//  Backstep
-//
-//  Created by Robert Steinbach on 3/21/14.
-//  Copyright (c) 2014 Backstep. All rights reserved.
-//
+/*
+ Current Plist Keys:
+ * finder_id
+ * item_json
+ * attempt_ids
+ 
+ */
 
 #import "PlistOperations.h"
 
@@ -28,7 +28,10 @@
     if (doAppend) {
         NSDictionary *prevContents = [PlistOperations openPlist];
         for(id key in prevContents) {
-            [dictCopy setObject:[prevContents objectForKey:key] forKey:key];
+            // make sure we don't override the new data (given by dictCopy) with the old data (given by prevContents)
+            if (![dictCopy objectForKey:key]) {
+                [dictCopy setObject:[prevContents objectForKey:key] forKey:key];
+            }
         }
     }
     
@@ -94,6 +97,13 @@
 {
     LostItem *lostItem = [PlistOperations getLostItem];
     return lostItem.id;
+}
+
+// get the comma separated list of found item ids which represent those items which the user has made attempts on
++ (NSString *)getFoundItemAttempts
+{
+    NSString *attempts = [PlistOperations plistVal:@"attempt_ids"];
+    return attempts;
 }
 
 @end

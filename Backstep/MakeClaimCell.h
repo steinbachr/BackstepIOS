@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *itemDescription;
 @property (weak, nonatomic) IBOutlet UILabel *itemChars;
 @property (weak, nonatomic) IBOutlet UIButton *claimButton;
+@property (weak, nonatomic) IBOutlet UILabel *claimSubmittedLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
 @end

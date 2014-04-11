@@ -22,5 +22,6 @@
 + (NSString *) getFinderId;
 + (LostItem *) getLostItem;
 + (NSString *) getLostItemId;
++ (NSString *) getFoundItemAttempts;
 
 @end

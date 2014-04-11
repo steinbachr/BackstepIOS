@@ -3,10 +3,26 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "__35+[ApiInterface getList:controller:]_block_invoke:ApiInterface.m">
+         contextName = "-[LostClaimsController afterGet:]:LostClaimsController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.navigationController">
+            </PersistentString>
+         </PersistentStrings>
       </ContextState>
       <ContextState
          contextName = "-[FirstViewController shouldPerformSegueWithIdentifier:sender:]:FirstViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[SuccessfulClaimController afterGet:]:SuccessfulClaimController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[json arrayOfModelsFromDictionaries]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
       </ContextState>
       <ContextState
          contextName = "-[FoundItemsController tableView:cellForRowAtIndexPath:]:FoundItemsController.m">
@@ -17,12 +33,41 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[ColorPicker pickerView:numberOfRowsInComponent:]:ColorPicker.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.colorArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FoundSearchController filterItemsPendingAttempts]:FoundSearchController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FoundItemsController afterGet:]:FoundItemsController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[FirstViewController viewDidLoad]:FirstViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "__35+[ApiInterface getList:controller:]_block_invoke:ApiInterface.m">
+      </ContextState>
+      <ContextState
          contextName = "-[FoundSearchController makeClaim:]:FoundSearchController.m">
          <PersistentStrings>
             <PersistentString
                value = "sender.claimItem">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FinderAccountTypeController prepareForSegue:sender:]:FinderAccountTypeController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
       </ContextState>
       <ContextState
          contextName = "-[AppDelegate userChosenType]:AppDelegate.m">
@@ -36,52 +81,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "main:main.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[FirstViewController viewDidLoad]:FirstViewController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[ConfirmationController submitItem]:ConfirmationController.m">
-      </ContextState>
-      <ContextState
          contextName = "-[FoundItemsController tableView:numberOfRowsInSection:]:FoundItemsController.m">
       </ContextState>
       <ContextState
-         contextName = "-[FinderAccountTypeController prepareForSegue:sender:]:FinderAccountTypeController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[AppDelegate application:didFinishLaunchingWithOptions:]:AppDelegate.m">
-      </ContextState>
-      <ContextState
-         contextName = "__84+[JSONHTTPClient JSONFromURLWithString:method:params:orBodyData:headers:completion:]_block_invoke:JSONHTTPClient.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[FoundItemsController afterGet:]:FoundItemsController.m">
-      </ContextState>
-      <ContextState
-         contextName = "-[LostClaimsController afterGet:]:LostClaimsController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.navigationController">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[ColorPicker pickerView:numberOfRowsInComponent:]:ColorPicker.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.colorArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "-[SuccessfulClaimController afterGet:]:SuccessfulClaimController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[json arrayOfModelsFromDictionaries]">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "main:main.m">
       </ContextState>
       <ContextState
          contextName = "+[ApiInterface createHelper:url:indicator:controller:]:ApiInterface.m">
@@ -93,6 +96,9 @@
       </ContextState>
       <ContextState
          contextName = "-[JSONModel initWithString:usingEncoding:error:]:JSONModel.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[LostClaimsController tableView:cellForRowAtIndexPath:]:LostClaimsController.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

@@ -28,11 +28,19 @@
     return self;
 }
 
+// check if foundItemId is in the list of attempts on found items this user has made
+- (BOOL)itemPendingAttempt:(NSString *)foundItemId
+{
+    NSString *foundItemIds = [PlistOperations getFoundItemAttempts];
+    NSArray *foundItemIdsArr = [foundItemIds componentsSeparatedByString:@","];
+
+    return [foundItemIdsArr containsObject:foundItemId];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [FoundItem get:self binId:self.binId];
-    LostItem *test = [PlistOperations getLostItem];
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,8 +86,14 @@
     cell.itemChars.text = selected.identifying_characteristics;
     cell.itemImage.image = [selected rowPicture];
     
-    cell.claimButton.tag = indexPath.row;
-    [cell.claimButton addTarget:self action:@selector(makeClaim:) forControlEvents:UIControlEventTouchUpInside];
+    // if the item has a pending claim request by this user, don't show the claim button
+    if ([self itemPendingAttempt:selected.id]) {
+        [cell.claimButton removeFromSuperview];
+        cell.claimSubmittedLabel.hidden = NO;
+    } else {
+        cell.claimButton.tag = indexPath.row;
+        [cell.claimButton addTarget:self action:@selector(makeClaim:) forControlEvents:UIControlEventTouchUpInside];
+    }
     
     return cell;
 }
@@ -94,7 +108,7 @@
 /**-- CreatableController implementation --**/
 - (void)afterCreate
 {
-    // remove the item that was just created from the list of found items and redraw the table
+    // remove the item that just had a sourcing attempt created from the list of found items and redraw the table
     [self.items removeObjectAtIndex:self.currentAttemptIndex];
     [self.tableView reloadData];
 }
