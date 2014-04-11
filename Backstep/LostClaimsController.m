@@ -8,6 +8,7 @@
 
 #import "LostClaimsController.h"
 #import "SuccessfulClaimController.h"
+#import "ClaimRequestTableCell.h"
 #import "PlistOperations.h"
 
 @interface LostClaimsController ()
@@ -50,12 +51,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lostItemClaimCell"];
+    ClaimRequestTableCell *cell = [tableView dequeueReusableCellWithIdentifier:@"lostItemClaimCell"];
     
     SourcingAttempt *selected = [self.attempts objectAtIndex:indexPath.row];
-    cell.textLabel.text = [selected.found_item description];
-    cell.detailTextLabel.text = selected.found_item.identifying_characteristics;
-    cell.imageView.image = [selected.found_item rowPicture];
+    cell.itemDescription.text = [selected.found_item description];
+    cell.itemCharacteristics.text = selected.found_item.identifying_characteristics;
+    cell.itemImage.image = [selected.found_item rowPicture];
+    
+    if ([selected isFailure]) {
+        cell.requestDeniedLabel.hidden = NO;
+    }
     
     return cell;
 }
@@ -67,7 +72,7 @@
 {
     for (int i = 0 ;  i < [self.attempts count] ; i++) {
         SourcingAttempt *curAttempt = [self.attempts objectAtIndex:i];
-        if (curAttempt.success) {
+        if ([curAttempt successAsBool]) {
             return curAttempt;
         }
     }

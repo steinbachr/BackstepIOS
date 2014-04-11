@@ -100,5 +100,13 @@
       <ContextState
          contextName = "-[LostClaimsController tableView:cellForRowAtIndexPath:]:LostClaimsController.m">
       </ContextState>
+      <ContextState
+         contextName = "-[LostClaimsController successfulAttempt]:LostClaimsController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[curAttempt successAsBool]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

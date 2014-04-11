@@ -24,6 +24,20 @@
     [ApiInterface getList:url controller:controller];
 }
 
+- (BOOL)isFailure
+{
+    return [self.success isEqualToString:@"0"];
+}
+
+- (BOOL)successAsBool
+{
+    if (self.success == nil || [self isFailure]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
 // Gettable Implementations
 + (void)get:(UIViewController<GettableController> *)controller
 {

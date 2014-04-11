@@ -26,5 +26,8 @@
 + (void)get:(UIViewController<GettableController> *)controller lostId:(NSString *)lostId;
 // get the finder for a specific sourcing attempt
 - (void)getFinder:(UIViewController<GettableController> *)controller;
+// because we're using success as a string instead of bool, these functions proxy the boolean nature of success
+- (BOOL)successAsBool;
+- (BOOL)isFailure;
 
 @end
