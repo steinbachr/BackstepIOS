@@ -201,6 +201,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C51DE14618F8B67E00FD8CF3 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */,
+				C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */,
+				C528A48C18F11EE200AAC2E3 /* FoundItemsController.h */,
+				C528A48D18F11EE200AAC2E3 /* FoundItemsController.m */,
+				C5A6A18318F1DEB500038AD2 /* NewItemController.h */,
+				C5A6A18418F1DEB500038AD2 /* NewItemController.m */,
+				C5A6A19018F2192100038AD2 /* MatchesController.h */,
+				C5A6A19118F2192100038AD2 /* MatchesController.m */,
+			);
+			name = Tabs;
+			sourceTree = "<group>";
+		};
 		C536F09F18DA1FC80088BB88 = {
 			isa = PBXGroup;
 			children = (
@@ -341,15 +356,8 @@
 		C551FE6618F0A43A002B3B85 /* FinderControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C51DE14618F8B67E00FD8CF3 /* Tabs */,
 				C5A9ADDB18F48D26008FA423 /* Account */,
-				C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */,
-				C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */,
-				C528A48C18F11EE200AAC2E3 /* FoundItemsController.h */,
-				C528A48D18F11EE200AAC2E3 /* FoundItemsController.m */,
-				C5A6A18318F1DEB500038AD2 /* NewItemController.h */,
-				C5A6A18418F1DEB500038AD2 /* NewItemController.m */,
-				C5A6A19018F2192100038AD2 /* MatchesController.h */,
-				C5A6A19118F2192100038AD2 /* MatchesController.m */,
 			);
 			name = FinderControllers;
 			sourceTree = "<group>";

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "GettableController.h"
 
-@interface MatchesController : UITableViewController <UITableViewDelegate, UITableViewDataSource, GettableController>
+@interface MatchesController : UITableViewController <GettableController>
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property NSMutableArray *items;

@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
     [self getData];
-    [self.itemsTable setContentInset:UIEdgeInsetsMake(50,0,0,0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(50,0,0,0)];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -102,7 +102,7 @@
 - (void)afterGet:(id)json
 {
     self.items = [FoundItem arrayOfModelsFromDictionaries:json];
-    [self.itemsTable reloadData];
+    [self.tableView reloadData];
 }
 
 @end

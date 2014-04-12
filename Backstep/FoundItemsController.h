@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GettableController.h"
 
-@interface FoundItemsController : UIViewController <UITableViewDelegate, UITableViewDataSource, GettableController>
+@interface FoundItemsController : UITableViewController <GettableController>
 
-@property (strong, nonatomic) IBOutlet UITableView *itemsTable;
 @property NSMutableArray *items;
 
 @end
