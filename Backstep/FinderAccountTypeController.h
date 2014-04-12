@@ -12,7 +12,7 @@
 @interface FinderAccountTypeController : UIViewController <UIPickerViewDataSource, UIPickerViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIPickerView *typePicker;
-@property (strong, nonatomic)   NSArray *typesArray;
+@property (strong, nonatomic)   NSDictionary *typesDictionary;
 @property FinderProfile* finder;
 
 @end

@@ -215,9 +215,6 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Found" image="tabs_found" id="30a-T8-YxZ"/>
-                    <connections>
-                        <outlet property="itemsTable" destination="4wo-yD-ua7" id="vxK-bO-o6b"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxd-5G-3jc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -834,7 +831,7 @@
             </objects>
             <point key="canvasLocation" x="2337" y="136"/>
         </scene>
-        <!--Finder Account Institution Controller - School-->
+        <!--Finder Account Institution Controller - Institution type here-->
         <scene sceneID="GYD-yp-94o">
             <objects>
                 <viewController id="lIB-UA-WYo" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
@@ -846,7 +843,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="School Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-N2-fqp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-N2-fqp">
                                 <rect key="frame" x="20" y="106" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -867,7 +864,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="School" id="CfE-Xs-jVi"/>
+                    <navigationItem key="navigationItem" title="Institution type here" id="CfE-Xs-jVi"/>
                     <connections>
                         <outlet property="indicator" destination="UON-2b-9Ma" id="549-5j-MHr"/>
                         <outlet property="institutionText" destination="H5Q-N2-fqp" id="WB3-qk-W9z"/>

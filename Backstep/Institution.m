@@ -11,6 +11,13 @@
 
 @implementation Institution
 
++ (NSDictionary *) institutionCategories
+{
+    return @{
+             @"school": @"School",
+             @"police": @"Police Department"
+             };
+}
 
 + (void)get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId
 {

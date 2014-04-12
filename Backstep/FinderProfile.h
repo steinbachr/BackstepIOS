@@ -16,5 +16,6 @@
 @property NSString *user;
 @property NSString *name;
 @property NSString *institution;
+@property NSString<Optional> *institution_category;
 
 @end

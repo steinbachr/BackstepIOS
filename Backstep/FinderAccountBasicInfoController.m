@@ -8,6 +8,7 @@
 
 #import "FinderAccountBasicInfoController.h"
 #import "FinderAccountInstitutionController.h"
+#import "Institution.h"
 
 @interface FinderAccountBasicInfoController ()
 
@@ -51,6 +52,10 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     FinderAccountInstitutionController *dest = [segue destinationViewController];
+    NSDictionary *instCategories = [Institution institutionCategories];
+    
+    /* set the destination title to the human readable institution category */
+    dest.title = [instCategories objectForKey:self.finder.institution_category];
     dest.finder = self.finder;
 }
 

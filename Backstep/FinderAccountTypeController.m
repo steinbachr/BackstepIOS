@@ -10,6 +10,7 @@
 #import "FinderAccountBasicInfoController.h"
 #import "FinderHomeController.h"
 #import "PlistOperations.h"
+#import "Institution.h"
 
 @interface FinderAccountTypeController ()
 
@@ -37,7 +38,8 @@
         [self.navigationController presentViewController:finderHome animated:NO completion:nil];
     }
 
-    self.typesArray = @[@"School"];
+    self.finder.institution_category = [[[Institution institutionCategories] allKeys] objectAtIndex:0];
+    self.typesDictionary = [Institution institutionCategories];
 }
 
 - (void)didReceiveMemoryWarning
@@ -55,17 +57,19 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component
 {
-    return [self.typesArray count];
+    return [[self.typesDictionary allKeys] count];
 }
 
 // Overrides of UIPickerViewDelegate
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row   forComponent:(NSInteger)component
 {
-    return [self.typesArray objectAtIndex:row];
+    return [[self.typesDictionary allValues] objectAtIndex:row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component
 {
+    NSString *selectedCategory = [[self.typesDictionary allKeys] objectAtIndex:row];
+    self.finder.institution_category = selectedCategory;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -25,6 +25,8 @@
 @property NSString<Optional> *state;
 @property NSString<Optional> *address;
 
++ (NSDictionary *) institutionCategories;
+
 // Institution gettable relies on knowing the cityId, so we override here
 + (void) get:(UIViewController<GettableController> *)controller cityId:(NSString *)cityId;
 - (UIImage *) iconForCategory;
