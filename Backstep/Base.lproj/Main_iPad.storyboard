@@ -27,7 +27,7 @@
                                     <constraint firstAttribute="height" constant="211" id="1ZZ-gO-q4c"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bz8-rD-HHE">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bz8-rD-HHE" customClass="RequiredField">
                                 <rect key="frame" x="52" y="380" width="274" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -36,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-SW-wnK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzX-SW-wnK" customClass="RequiredField">
                                 <rect key="frame" x="416" y="380" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -206,7 +206,7 @@
                                     <outlet property="delegate" destination="CYY-pu-Msh" id="W0h-49-BvR"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ioy-pZ-9KX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ioy-pZ-9KX" customClass="RequiredField">
                                 <rect key="frame" x="384" y="390" width="353" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -288,6 +288,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="city_background_2" translatesAutoresizingMaskIntoConstraints="NO" id="81g-1F-60K">
+                                <rect key="frame" x="0.0" y="684" width="768" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="VyG-eT-iAU"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-xH-K84">
                                 <rect key="frame" x="289" y="697" width="191" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -308,6 +315,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="81g-1F-60K" firstAttribute="width" secondItem="jV0-U8-LnA" secondAttribute="width" id="88b-cA-MQ4"/>
                             <constraint firstAttribute="centerX" secondItem="ZmJ-mW-slP" secondAttribute="centerX" id="BGA-zD-vWi"/>
                             <constraint firstAttribute="centerX" secondItem="rDj-el-cge" secondAttribute="centerX" constant="-0.5" id="DEx-aF-ZWj"/>
                             <constraint firstAttribute="centerX" secondItem="eC6-xH-K84" secondAttribute="centerX" constant="-0.5" id="LGS-Vs-M7c"/>
@@ -353,7 +361,7 @@
                                     <outlet property="delegate" destination="ijB-dU-gdo" id="brS-e1-1SG"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics (i.e. stickers, drivers license, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SvU-9Z-ssN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics (i.e. stickers, drivers license, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SvU-9Z-ssN" customClass="RequiredField">
                                 <rect key="frame" x="65" y="357" width="639" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -950,6 +958,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="city_background_3" translatesAutoresizingMaskIntoConstraints="NO" id="VSg-Yh-AOz">
+                                <rect key="frame" x="0.0" y="684" width="768" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="qpE-dE-h8n"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZS-aV-jmR">
                                 <rect key="frame" x="289" y="697" width="191" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -963,11 +978,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="vwK-nM-PGb" kind="push" id="7fF-hQ-zs3"/>
-                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-zA-Wq4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBP-zA-Wq4" customClass="RequiredField">
                                 <rect key="frame" x="103" y="213" width="563" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -976,7 +988,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-at-oIe">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZLU-at-oIe" customClass="RequiredField">
                                 <rect key="frame" x="103" y="336" width="563" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -985,7 +997,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KxV-v4-QiT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KxV-v4-QiT" customClass="RequiredField">
                                 <rect key="frame" x="103" y="465" width="563" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1002,6 +1014,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KxV-v4-QiT" secondAttribute="centerX" constant="-0.5" id="DUu-YW-oOq"/>
+                            <constraint firstItem="VSg-Yh-AOz" firstAttribute="width" secondItem="VS3-pP-YM9" secondAttribute="width" id="ExV-Dx-b9U"/>
                             <constraint firstAttribute="centerX" secondItem="jBP-zA-Wq4" secondAttribute="centerX" constant="-0.5" id="MuF-GO-iBN"/>
                             <constraint firstAttribute="centerX" secondItem="ZLU-at-oIe" secondAttribute="centerX" constant="-0.5" id="TCV-r3-OzQ"/>
                             <constraint firstAttribute="centerX" secondItem="mZS-aV-jmR" secondAttribute="centerX" constant="-0.5" id="s4K-RD-wyN"/>
@@ -1023,7 +1036,7 @@
         <!--Finder Account Institution Controller - Insitution Type goes here-->
         <scene sceneID="xgm-95-BYU">
             <objects>
-                <viewController id="vwK-nM-PGb" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finderInstitutionController" id="vwK-nM-PGb" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZRQ-Rx-erd"/>
                         <viewControllerLayoutGuide type="bottom" id="vDe-hV-LeV"/>
@@ -1032,6 +1045,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="city_background_4" translatesAutoresizingMaskIntoConstraints="NO" id="yxf-IW-TwW">
+                                <rect key="frame" x="0.0" y="684" width="768" height="340"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="340" id="oxy-oM-JMb"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcm-4j-t7a">
                                 <rect key="frame" x="289" y="697" width="191" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1046,7 +1066,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-xY-Bcm">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLI-xY-Bcm" customClass="RequiredField">
                                 <rect key="frame" x="55" y="216" width="658" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1063,6 +1083,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="lcm-4j-t7a" secondAttribute="centerX" constant="-0.5" id="PrZ-VN-5RL"/>
+                            <constraint firstAttribute="width" secondItem="yxf-IW-TwW" secondAttribute="width" id="TXf-4y-VG0"/>
                             <constraint firstAttribute="centerX" secondItem="ntp-r9-b5C" secondAttribute="centerX" id="axj-hd-xJZ"/>
                             <constraint firstAttribute="centerX" secondItem="zLI-xY-Bcm" secondAttribute="centerX" id="geP-YC-OGc"/>
                         </constraints>
@@ -1111,7 +1132,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying characteristics (i.e. stickers, ID, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-wg-Qdy">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying characteristics (i.e. stickers, ID, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BpA-wg-Qdy" customClass="RequiredField">
                                 <rect key="frame" x="33" y="189" width="671" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1307,7 +1328,7 @@
                                     <constraint firstAttribute="width" constant="497" id="Z9o-Ar-x5t"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Signup As Finder">
+                                <state key="normal" title="Found Something">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

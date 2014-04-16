@@ -8,6 +8,7 @@
 
 #import "FinderAccountInstitutionController.h"
 #import "FinderHomeController.h"
+#import "Institution.h"
 
 @interface FinderAccountInstitutionController ()
 
@@ -27,6 +28,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSDictionary *instCategories = [Institution institutionCategories];
+    /* set the institution text placeholder to the human readable institution category */
+    self.institutionText.placeholder = [NSString stringWithFormat:@"%@ Name",
+                                        [instCategories objectForKey:self.finder.institution_category]];
+    
     [self.nextButton addTarget:self action:@selector(createFinder) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -39,9 +46,12 @@
 /**-- Button Actions --**/
 - (void)createFinder
 {
-    self.finder.institution = self.institutionText.text;
-    [self.finder create:self.indicator controller:self];
+    if ([self.institutionText performCheck]) {
+        self.finder.institution = self.institutionText.text;
+        [self.finder create:self.indicator controller:self];
+    }
 }
+
 
 /**-- CreatableController Implementations --**/
 - (void)afterCreate

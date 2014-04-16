@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "LostItem.h"
+#import "RequiredField.h"
 
 @interface FirstViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet RequiredField *nameTextField;
+@property (weak, nonatomic) IBOutlet RequiredField *emailTextField;
+
 @property LostItem *lostItem;
 
 @end

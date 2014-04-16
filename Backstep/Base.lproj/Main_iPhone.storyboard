@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tZO-cZ-VKP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tZO-cZ-VKP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -23,13 +23,13 @@
                                     <constraint firstAttribute="height" constant="113" id="xu3-6X-8i1"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yd3-7E-eKX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yd3-7E-eKX" customClass="RequiredField">
                                 <rect key="frame" x="11" y="210" width="110" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-7k-CUP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Ae-7k-CUP" customClass="RequiredField">
                                 <rect key="frame" x="134" y="210" width="173" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -65,8 +65,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ccZ-t3-StM"/>
                     <connections>
-                        <outlet property="emailTextField" destination="7Ae-7k-CUP" id="YHs-O3-12p"/>
-                        <outlet property="nameTextField" destination="Yd3-7E-eKX" id="ldV-tO-vrK"/>
+                        <outlet property="emailTextField" destination="7Ae-7k-CUP" id="u3K-O5-OMt"/>
+                        <outlet property="nameTextField" destination="Yd3-7E-eKX" id="zEb-ju-RPo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -174,7 +174,7 @@
                                     <outlet property="delegate" destination="HYe-pJ-SFi" id="Mjy-qW-usA"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZB2-Df-fbA">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZB2-Df-fbA" customClass="RequiredField">
                                 <rect key="frame" x="58" y="241" width="204" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -221,7 +221,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Location" id="l7W-H0-xBC"/>
                     <connections>
-                        <outlet property="locationTextField" destination="ZB2-Df-fbA" id="q3T-Ab-Vpw"/>
+                        <outlet property="locationTextField" destination="ZB2-Df-fbA" id="mPn-b9-4yK"/>
                         <outlet property="state" destination="Qoy-6l-3sc" id="zO7-fz-5Fa"/>
                     </connections>
                 </viewController>
@@ -333,7 +333,7 @@
                                     <outlet property="delegate" destination="H4x-kX-0Ck" id="Qyk-RA-puY"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-CT-7LB">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXn-CT-7LB" customClass="RequiredField">
                                 <rect key="frame" x="17" y="190" width="287" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -376,7 +376,7 @@
                     <connections>
                         <outlet property="categorySpinner" destination="zKN-gL-ejb" id="5kB-rM-ATF"/>
                         <outlet property="colorSpinner" destination="E8a-Bg-j2H" id="Dvf-pZ-tIG"/>
-                        <outlet property="identifyingText" destination="AXn-CT-7LB" id="QFt-91-747"/>
+                        <outlet property="identifyingText" destination="AXn-CT-7LB" id="3B0-da-vIc"/>
                         <outlet property="indicator" destination="3fr-tF-ljN" id="XaQ-kN-Zf9"/>
                         <outlet property="submitButton" destination="gW9-Gb-VKk" id="AQL-aN-abb"/>
                     </connections>
@@ -885,7 +885,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-6Z-ahc">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Qi-6Z-ahc" customClass="RequiredField">
                                 <rect key="frame" x="25" y="89" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -894,7 +894,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-GW-Nzh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C3O-GW-Nzh" customClass="RequiredField">
                                 <rect key="frame" x="25" y="141" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -903,7 +903,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WC-AX-oUD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4WC-AX-oUD" customClass="RequiredField">
                                 <rect key="frame" x="25" y="197" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -926,9 +926,6 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="lIB-UA-WYo" kind="push" id="z57-PZ-cWa"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -942,11 +939,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Basic Info" id="7XX-JL-FJo"/>
                     <connections>
-                        <outlet property="emailText" destination="0Qi-6Z-ahc" id="9W1-rb-Iv0"/>
+                        <outlet property="emailText" destination="0Qi-6Z-ahc" id="wq6-3s-OEZ"/>
                         <outlet property="indicator" destination="tTX-08-mkq" id="c03-Ms-Pp2"/>
-                        <outlet property="nameText" destination="C3O-GW-Nzh" id="93Y-ac-vdL"/>
+                        <outlet property="nameText" destination="C3O-GW-Nzh" id="dWH-4L-cB4"/>
                         <outlet property="nextButton" destination="4TA-P9-VZU" id="qiY-6q-nCM"/>
-                        <outlet property="passwordText" destination="4WC-AX-oUD" id="AcR-Mi-gKt"/>
+                        <outlet property="passwordText" destination="4WC-AX-oUD" id="GFI-dv-fmL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0F-aZ-9UU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -956,7 +953,7 @@
         <!--Finder Account Institution Controller - Institution type here-->
         <scene sceneID="GYD-yp-94o">
             <objects>
-                <viewController id="lIB-UA-WYo" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finderInstitutionController" id="lIB-UA-WYo" customClass="FinderAccountInstitutionController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wma-s1-nrv"/>
                         <viewControllerLayoutGuide type="bottom" id="Naf-fw-kda"/>
@@ -965,7 +962,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-N2-fqp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H5Q-N2-fqp" customClass="RequiredField">
                                 <rect key="frame" x="20" y="106" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1004,7 +1001,7 @@
                     <navigationItem key="navigationItem" title="Institution type here" id="CfE-Xs-jVi"/>
                     <connections>
                         <outlet property="indicator" destination="UON-2b-9Ma" id="549-5j-MHr"/>
-                        <outlet property="institutionText" destination="H5Q-N2-fqp" id="WB3-qk-W9z"/>
+                        <outlet property="institutionText" destination="H5Q-N2-fqp" id="CWp-rY-2vF"/>
                         <outlet property="nextButton" destination="7Xn-NC-xUD" id="hQ7-8x-rfI"/>
                     </connections>
                 </viewController>
@@ -1024,7 +1021,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics (i.e. stickers, ID, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-X4-sWP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Identifying Characteristics (i.e. stickers, ID, etc.)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncM-X4-sWP" customClass="RequiredField">
                                 <rect key="frame" x="20" y="137" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -1066,7 +1063,7 @@
                     <navigationItem key="navigationItem" title="Details" id="Wjb-Q3-r0B"/>
                     <connections>
                         <outlet property="activityIndicator" destination="zwQ-sZ-DoD" id="Edi-a0-r2c"/>
-                        <outlet property="characteristicsTextField" destination="ncM-X4-sWP" id="0hZ-cv-fgS"/>
+                        <outlet property="characteristicsTextField" destination="ncM-X4-sWP" id="Ydr-MC-07d"/>
                         <outlet property="finishButton" destination="tgA-un-CEZ" id="pfL-Oo-N7f"/>
                     </connections>
                 </viewController>
@@ -1216,7 +1213,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="233" id="dOJ-60-6oc"/>
                                 </constraints>
-                                <state key="normal" title="Signup As Finder">
+                                <state key="normal" title="Found Something">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -1240,7 +1237,7 @@
                             <constraint firstAttribute="width" secondItem="Ddy-1C-wtL" secondAttribute="width" id="Hjl-0h-i0c"/>
                             <constraint firstAttribute="centerX" secondItem="6Sr-fh-iVE" secondAttribute="centerX" constant="-0.5" id="aWb-dk-vTn"/>
                             <constraint firstItem="Ddy-1C-wtL" firstAttribute="top" secondItem="kvh-aI-caM" secondAttribute="bottom" id="ezn-Nv-707"/>
-                            <constraint firstAttribute="centerX" secondItem="VSs-Mx-ybA" secondAttribute="centerX" constant="-0.5" id="fCU-l3-NMV"/>
+                            <constraint firstAttribute="centerX" secondItem="VSs-Mx-ybA" secondAttribute="centerX" id="fCU-l3-NMV"/>
                             <constraint firstItem="6Sr-fh-iVE" firstAttribute="top" secondItem="fwm-2m-Ylc" secondAttribute="bottom" constant="13" id="fMt-dK-UTA"/>
                             <constraint firstAttribute="centerX" secondItem="fwm-2m-Ylc" secondAttribute="centerX" constant="-0.5" id="gUW-ZO-rYq"/>
                             <constraint firstItem="fwm-2m-Ylc" firstAttribute="top" secondItem="Ddy-1C-wtL" secondAttribute="bottom" constant="32" id="t5G-eU-j8d"/>

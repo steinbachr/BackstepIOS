@@ -40,17 +40,7 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    if ([self.nameTextField.text length] == 0 || [self.emailTextField.text length] == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:InfoRequiredTitle
-                                                        message:InfoRequiredMessage
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        return NO;
-    }
-
-    return YES;
+    return [self.nameTextField performCheck] && [self.emailTextField performCheck];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

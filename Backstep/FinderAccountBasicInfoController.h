@@ -10,14 +10,16 @@
 #import "FinderProfile.h"
 #import "User.h"
 #import "CreatableController.h"
+#import "RequiredField.h"
 
 @interface FinderAccountBasicInfoController : UIViewController<CreatableController>
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
-@property (weak, nonatomic) IBOutlet UITextField *emailText;
-@property (weak, nonatomic) IBOutlet UITextField *nameText;
-@property (weak, nonatomic) IBOutlet UITextField *passwordText;
+
+@property (weak, nonatomic) IBOutlet RequiredField *emailText;
+@property (weak, nonatomic) IBOutlet RequiredField *nameText;
+@property (weak, nonatomic) IBOutlet RequiredField *passwordText;
 
 @property FinderProfile* finder;
 @property User* user;

@@ -57,8 +57,10 @@
 /**-- Button Actions --**/
 - (void) createItem
 {
-    self.foundItem.identifying_characteristics = self.identifyingText.text;
-    [self.foundItem create:self.indicator controller:self];
+    if ([self.identifyingText performCheck]) {
+        self.foundItem.identifying_characteristics = self.identifyingText.text;
+        [self.foundItem create:self.indicator controller:self];
+    }
 }
 
 /**-- Overrides of UIPickerViewDataSource --**/

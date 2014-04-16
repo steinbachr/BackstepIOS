@@ -39,30 +39,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 //** Button Actions **//
 - (void)createUser
 {
     self.user.email = self.emailText.text;
     self.user.password = self.passwordText.text;
     self.finder.name = self.nameText.text;
-    [self.user create:self.indicator controller:self];
+    if ([self.emailText performCheck] && [self.nameText performCheck] && [self.passwordText performCheck]) {
+        [self.user create:self.indicator controller:self];
+    }
 }
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    FinderAccountInstitutionController *dest = [segue destinationViewController];
-    NSDictionary *instCategories = [Institution institutionCategories];
-    
-    /* set the destination title to the human readable institution category */
-    dest.title = [instCategories objectForKey:self.finder.institution_category];
-    dest.finder = self.finder;
-}
 
 /**-- CreatableController Implementations --**/
 - (void)afterCreate
 {
-    //since we just move onto the next step right away, theres nothing to do here
+    FinderAccountInstitutionController *finderInstitutionController = [self.storyboard instantiateViewControllerWithIdentifier:@"finderInstitutionController"];
+    finderInstitutionController.finder = self.finder;
+    
+    [self presentViewController:finderInstitutionController animated:NO completion:nil];
 }
 
 @end

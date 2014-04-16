@@ -40,17 +40,7 @@
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    if ([self.characteristicsTextField.text length] == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:InfoRequiredTitle
-                                                        message:InfoRequiredMessage
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
-        return NO;
-    }
-    
-    return YES;
+    return [self.characteristicsTextField performCheck];
 }
 
 /*
@@ -65,8 +55,10 @@
 
 - (void)submitItem
 {
-    self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
-    [self.lostItem create:nil controller:self];
+    if ([self.characteristicsTextField performCheck]) {
+        self.lostItem.identifying_characteristics = self.characteristicsTextField.text;
+        [self.lostItem create:nil controller:self];
+    }
 }
 
 /**-- Creatable Controller Implementations --**/

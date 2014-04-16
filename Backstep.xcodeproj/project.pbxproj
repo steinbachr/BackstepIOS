@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A47A6245D9D404A8EA8E14D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B290590157491498CF203C /* libPods.a */; };
+		C51788B318FF11AD00DE639C /* RequiredField.m in Sources */ = {isa = PBXBuildFile; fileRef = C51788B218FF11AD00DE639C /* RequiredField.m */; };
 		C51DE14518F8790A00FD8CF3 /* ClaimRequestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C51DE14418F8790A00FD8CF3 /* ClaimRequestTableCell.m */; };
 		C528A48A18F0DD5C00AAC2E3 /* FinderHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = C528A48918F0DD5C00AAC2E3 /* FinderHomeController.m */; };
 		C528A48E18F11EE200AAC2E3 /* FoundItemsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C528A48D18F11EE200AAC2E3 /* FoundItemsController.m */; };
@@ -74,6 +75,8 @@
 
 /* Begin PBXFileReference section */
 		3D49FFF98DA54351BC06DEA2 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C51788B118FF11AD00DE639C /* RequiredField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequiredField.h; sourceTree = "<group>"; };
+		C51788B218FF11AD00DE639C /* RequiredField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequiredField.m; sourceTree = "<group>"; };
 		C51DE14318F8790A00FD8CF3 /* ClaimRequestTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClaimRequestTableCell.h; sourceTree = "<group>"; };
 		C51DE14418F8790A00FD8CF3 /* ClaimRequestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClaimRequestTableCell.m; sourceTree = "<group>"; };
 		C528A48818F0DD5C00AAC2E3 /* FinderHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinderHomeController.h; sourceTree = "<group>"; };
@@ -394,6 +397,8 @@
 				C5D463F818F4766800D27DA7 /* MakeClaimCell.m */,
 				C51DE14318F8790A00FD8CF3 /* ClaimRequestTableCell.h */,
 				C51DE14418F8790A00FD8CF3 /* ClaimRequestTableCell.m */,
+				C51788B118FF11AD00DE639C /* RequiredField.h */,
+				C51788B218FF11AD00DE639C /* RequiredField.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -584,6 +589,7 @@
 				C5D463F918F4766800D27DA7 /* MakeClaimCell.m in Sources */,
 				C5D463F218F3B1F400D27DA7 /* CitiesSearchController.m in Sources */,
 				C551FE7318F0CDDD002B3B85 /* HomeController.m in Sources */,
+				C51788B318FF11AD00DE639C /* RequiredField.m in Sources */,
 				C5AF7EEE18F224DA00DCE789 /* MatchTableViewCell.m in Sources */,
 				C528A48A18F0DD5C00AAC2E3 /* FinderHomeController.m in Sources */,
 				C56C5ABE18DAAACD0076D65D /* DetailsController.m in Sources */,

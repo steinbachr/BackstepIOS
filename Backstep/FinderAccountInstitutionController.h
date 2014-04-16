@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "FinderProfile.h"
 #import "CreatableController.h"
+#import "RequiredField.h"
 
 @interface FinderAccountInstitutionController : UIViewController<CreatableController>
 
-@property (weak, nonatomic) IBOutlet UITextField *institutionText;
+
+@property (weak, nonatomic) IBOutlet RequiredField *institutionText;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property FinderProfile *finder;

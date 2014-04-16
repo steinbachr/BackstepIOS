@@ -9,10 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "LostItem.h"
 #import "CreatableController.h"
+#import "RequiredField.h"
 
 @interface DetailsController : UIViewController<CreatableController>
 
-@property (weak, nonatomic) IBOutlet UITextField *characteristicsTextField;
+
+@property (weak, nonatomic) IBOutlet RequiredField *characteristicsTextField;
 @property LostItem *lostItem;
 
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
