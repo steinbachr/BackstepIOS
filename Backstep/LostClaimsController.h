@@ -13,5 +13,8 @@
 @interface LostClaimsController : UITableViewController<GettableController>
 
 @property NSArray* attempts;
+@property (weak, nonatomic) IBOutlet UIButton *syncButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+
 
 @end

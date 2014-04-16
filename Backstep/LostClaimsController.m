@@ -29,8 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.syncButton addTarget:self action:@selector(sync) forControlEvents:UIControlEventTouchUpInside];
+    
     [SourcingAttempt get:self lostId:[PlistOperations getLostItemId]];
-    [self.tableView setContentInset:UIEdgeInsetsMake(50,0,0,0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(30,0,0,0)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,6 +67,25 @@
     return cell;
 }
 
+- (void)toggleSync
+{
+    if (self.syncButton.hidden) {
+        self.syncButton.hidden = NO;
+        self.indicator.hidden = YES;
+    } else {
+        self.syncButton.hidden = YES;
+        self.indicator.hidden = NO;
+    }
+}
+
+
+/**-- Button Actions --**/
+- (void)sync
+{
+    [SourcingAttempt get:self lostId:[PlistOperations getLostItemId]];
+    [self toggleSync];
+}
+
 
 /**-- GettableController implementation --**/
 // check if any of self.attempts is a successful attempt. If so, return it. If not, return nil
@@ -83,6 +104,7 @@
 - (void)afterGet:(id)json
 {
     self.attempts = [SourcingAttempt arrayOfModelsFromDictionaries:json];
+    [self toggleSync];
     
     /* if any of the attempts were a success, then present the successful claim controller modal */
     SourcingAttempt *successfulAttempt = [self successfulAttempt];
@@ -94,7 +116,5 @@
         [self.tableView reloadData];
     }
 }
-
-
 
 @end

@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [PlistOperations deletePlist]; //DEBUGGING!!!
+    //[PlistOperations deletePlist]; //DEBUGGING!!!
     //see if we've already made a choice of what type of user we want to be.
     if ([self userChosenType]) {
         NSString *identifier = @"lost_item_first";

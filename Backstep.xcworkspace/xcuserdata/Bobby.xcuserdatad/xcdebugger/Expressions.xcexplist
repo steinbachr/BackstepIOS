@@ -58,6 +58,14 @@
          contextName = "-[FoundItemsController afterGet:]:FoundItemsController.m">
       </ContextState>
       <ContextState
+         contextName = "-[LostClaimsController tableView:viewForHeaderInSection:]:LostClaimsController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self dequeueReusableHeaderFooterViewWithIdentifier:@&quot;headerSyncView&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[FirstViewController viewDidLoad]:FirstViewController.m">
       </ContextState>
       <ContextState

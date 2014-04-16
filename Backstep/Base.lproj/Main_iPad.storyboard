@@ -742,9 +742,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="fQc-Cz-dKL">
+                            <rect key="frame" x="0.0" y="0.0" width="768" height="63"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAh-Qw-MNL">
+                                    <rect key="frame" x="343" y="18" width="83" height="28"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="83" id="0Lx-a1-N02"/>
+                                    </constraints>
+                                    <state key="normal" image="sync_icon">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-Vc-jnB">
+                                    <rect key="frame" x="374" y="22" width="20" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.73424855180000004" green="0.90798389670000001" blue="0.7936004901" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="centerY" secondItem="Wah-Vc-jnB" secondAttribute="centerY" constant="-0.5" id="2ue-yD-62j"/>
+                                <constraint firstAttribute="centerX" secondItem="Wah-Vc-jnB" secondAttribute="centerX" id="W01-by-5A5"/>
+                                <constraint firstAttribute="centerY" secondItem="yAh-Qw-MNL" secondAttribute="centerY" constant="-0.5" id="gnZ-6e-LGz"/>
+                                <constraint firstAttribute="centerX" secondItem="yAh-Qw-MNL" secondAttribute="centerX" id="wPS-d4-Vd3"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lostItemClaimCell" rowHeight="78" id="i4G-HG-3WP" customClass="ClaimRequestTableCell">
-                                <rect key="frame" x="0.0" y="22" width="768" height="78"/>
+                                <rect key="frame" x="0.0" y="85" width="768" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="i4G-HG-3WP" id="JWa-ph-O6t">
                                     <rect key="frame" x="0.0" y="0.0" width="768" height="77"/>
@@ -797,6 +824,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Claim Requests" image="tabs_requests" id="Avn-jc-4X0"/>
+                    <connections>
+                        <outlet property="indicator" destination="Wah-Vc-jnB" id="9qv-m0-Fr4"/>
+                        <outlet property="syncButton" destination="yAh-Qw-MNL" id="Dtd-jD-8V2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvH-Mu-lje" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1411,6 +1442,7 @@
         <image name="location_icon" width="28" height="24"/>
         <image name="missing_image_icon" width="28" height="22"/>
         <image name="phone_icon" width="28" height="28"/>
+        <image name="sync_icon" width="28" height="28"/>
         <image name="tabs_found" width="28" height="28"/>
         <image name="tabs_new_item" width="28" height="28"/>
         <image name="tabs_pending" width="28" height="28"/>
